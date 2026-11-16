@@ -1397,10 +1397,17 @@ window.submitQuizAnswer = async function(selectedIdx) {
 
             const elapsed = (performance.now() - quizStartTime) / 1000;
             const isCorrect = selectedIdx === activeQuiz.question.answer;
-            const me = getMe();
+            let me = getMe();
+            if(!me)return;
+            const streak=isCorrect?(me.answerStreak||0)+1:0;
+            const streakCoins=streak>0&&streak%10===0?100:streak>0&&streak%5===0?50:0;
+            const streakEnergy=streak>0&&streak%10===0?20:0;
+            await syncPlayerUpdate(me.uid,{answerStreak:streak,bestStreak:Math.max(me.bestStreak||0,streak),...(streakCoins?{coins:me.coins+streakCoins,energy:Math.min(me.maxEnergy,me.energy+streakEnergy)}:{})});
+            me=getMe();if(!me||!firestoreEnabled){activeQuiz=null;return;}
+            if(streakCoins)showToast(`🔥 ${streak} correct in a row! +${streakCoins} coins${streakEnergy?' +20 energy (up to capacity)':''}`,'success');
             if(['biography','figurative','narrative'].includes(activeQuiz.topic)){const topic=activeQuiz.topic;const stats={...(me.academicTopics||{})};const t=stats[topic]||{correct:0,wrong:0};stats[topic]={correct:t.correct+(isCorrect?1:0),wrong:t.wrong+(isCorrect?0:1)};const academic={academicTopics:stats,correct:(me.correct||0)+(isCorrect?1:0),wrong:(me.wrong||0)+(isCorrect?0:1)};Object.assign(me,academic);syncPlayerUpdate(me.uid,academic);}
 
-            if(activeQuiz.actionType==='cook'){const q=activeQuiz;activeQuiz=null;if(!isCorrect)return showToast('Jawaban salah; ikan tetap utuh','error');const idx=(me.cargo||[]).findIndex(i=>i.id===q.targetUid&&!i.processed&&!i.special);if(idx<0||me.coins<q.cook.cost)return showToast('Ikan atau koin tidak tersedia','warning');const cargo=[...me.cargo];cargo[idx]={...cargo[idx],processed:true,name:cargo[idx].name+' Fillet',price:Math.round(cargo[idx].price*q.cook.mult)};await syncPlayerUpdate(me.uid,{cargo,coins:me.coins-q.cook.cost,cooked:(me.cooked||0)+1});return showToast('Ikan berhasil diolah!','success');}
+            if(activeQuiz.actionType==='cook'){const q=activeQuiz;activeQuiz=null;if(!isCorrect)return showToast('Jawaban salah; ikan tetap utuh','error');const idx=(me.cargo||[]).findIndex(i=>i.id===q.targetUid&&!i.processed&&!i.special);if(idx<0||me.coins<q.cook.cost)return showToast('Ikan atau koin tidak tersedia','warning');const cargo=[...me.cargo];cargo[idx]={...cargo[idx],processed:true,name:cargo[idx].name+' Fillet',price:Math.round(cargo[idx].price*q.cook.mult)};await syncPlayerUpdate(me.uid,{cargo,coins:me.coins-q.cook.cost+15,cooked:(me.cooked||0)+1});return showToast('🍳 Ikan berhasil diolah! Bonus +15 koin','success');}
 if(['hijack','steal','sabotage'].includes(activeQuiz.actionType)){const target=roomPlayers[activeQuiz.targetUid];if(target&&target.boatLevel>=3&&target.guardUntil>Date.now()){activeQuiz=null;return showToast('Serangan diblokir guard!','warning');}}
 if (activeQuiz.actionType === 'fishing') {
                 isLineCast = false;
@@ -1448,11 +1455,13 @@ if (activeQuiz.actionType === 'fishing') {
                 showFishCatchPopup(caughtFish, elapsed);
                 const updatedCargo = [...(me.cargo || []), caughtFish];
                 await syncPlayerUpdate(me.uid, {
+                    coins:me.coins+(tier==='large'?20:tier==='treasure'?30+Math.floor(Math.random()*31):0),
                     cargo: updatedCargo, catches:(me.catches||0)+(caughtFish.special?0:1), trashCount:(me.trashCount||0)+(tier==="trash"?1:0), treasureCount:(me.treasureCount||0)+(tier==="treasure"?1:0),
                     updatedAt: Date.now(),
                     lastEvent: `🎣 ${me.name} menangkap ${caughtFish.icon} ${caughtFish.name} (${caughtFish.sizeLabel}) dalam ${elapsed.toFixed(1)} detik!`
                 });
 
+                if(tier==='large'||tier==='treasure')showToast(tier==='large'?'🐠 Large catch! +20 coins':'💎 Treasure bonus! +30–60 coins','success');
                 showToast(`Mantap (${elapsed.toFixed(1)}s)! Dapat ${caughtFish.icon} ${caughtFish.name} (🪙${caughtFish.price})!`, "success");
             } else if (['hijack','steal','sabotage'].includes(activeQuiz.actionType)) {
  const q=activeQuiz;activeQuiz=null;
@@ -1623,7 +1632,9 @@ window.showMissions=function(){const me=getMe();if(!me)return;const ms=[['Fisher
             for(let i=0;i<6;i++){const o=audioCtx.createOscillator(),g=audioCtx.createGain(),t=audioCtx.currentTime+i*.22;o.frequency.value=i%2?660:880;g.gain.value=.12;o.connect(g);g.connect(audioCtx.destination);o.start(t);o.stop(t+.18);}
             }catch(e){}
         }
+        let duckTimer;
         function playAlarm(theft=false){
+            clearTimeout(duckTimer);memoriesBgm.volume=.06;duckTimer=setTimeout(()=>{memoriesBgm.volume=.22},6500);
             beep(); try{const a=theft?policeAudio:alarmAudio;a.currentTime=0;Promise.resolve(a.play()).catch(()=>{});}catch(e){beep();}
         }
         function alertPanel(title,msg,emergency=false,canPort=false){
