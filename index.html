@@ -230,10 +230,6 @@
                 </button>
 
                 <button onclick="activateGuard()" class="bg-teal-700 text-white rounded-xl p-3">🛡 Ship Guard (Lv.3+)</button><button onclick="restCabin()" class="bg-indigo-700 text-white rounded-xl p-3">🛏 Rest Onboard (Lv.5)</button><button onclick="showMissions()" class="bg-orange-700 text-white rounded-xl p-3">🏆 Missions & Achievements</button><!-- 5. Rare Co-op -->
-                <button style="display:none" id="btn-coop-action" onclick="openInteractionModal('coop')" class="col-span-2 sm:col-span-1 bg-indigo-600 hover:bg-indigo-500 active:scale-95 text-white font-game font-bold text-xs sm:text-sm p-3 rounded-2xl shadow-lg transition flex flex-col items-center justify-center text-center">
-                    <span class="text-base sm:text-lg">🤝 Kerja Sama</span>
-                    <span id="coop-cooldown-label" class="text-[10px] font-sans font-normal text-indigo-200">Siap! • Bonus Bersama</span>
-                </button>
             </div>
         </section>
 
@@ -848,7 +844,6 @@
                     cargo: sampleCargo,
                     location: i % 5 === 0 ? 'port' : 'sea',
                     hijackedFrom: null,
-                    coopCooldown: 0,
                     updatedAt: now - i * 1000,
                     lastEvent: `⛵ ${fname} aktif berlayar di lautan!`
                 };
@@ -916,7 +911,6 @@ window.joinMultiplayerRoom = async function() {
                 cargo: [],
                 location: 'sea',
                 hijackedFrom: null,
-                coopCooldown: 0,
                 updatedAt: Date.now(),
                 lastEvent: `⛵ ${nameInput} baru saja berlayar memasuki perairan ${currentRoomCode}!`
             };
@@ -1062,15 +1056,6 @@ window.joinMultiplayerRoom = async function() {
                 </span>
             `;
 
-            const coopBtn = document.getElementById('btn-coop-action');
-            const coopLabel = document.getElementById('coop-cooldown-label');
-            if ((me.coopCooldown || 0) > 0) {
-                coopBtn.classList.add('opacity-60');
-                coopLabel.textContent = `Jeda ${me.coopCooldown} aksi lagi`;
-            } else {
-                coopBtn.classList.remove('opacity-60');
-                coopLabel.textContent = `Siap! • Bonus Bersama`;
-            }
 
             renderPortView(me);
         }
@@ -1178,10 +1163,8 @@ window.joinMultiplayerRoom = async function() {
             }
 
             isLineCast = true;
-            const nextCd = Math.max(0, (me.coopCooldown || 0) - 1);
             await syncPlayerUpdate(me.uid, {
                 energy: me.energy - 15,
-                coopCooldown: nextCd,
                 updatedAt: Date.now()
             });
 
@@ -1208,9 +1191,10 @@ window.joinMultiplayerRoom = async function() {
         };
 
         // ==========================================
-        // 6. HIJACK/SWAP SHIP, STEAL, SABOTAGE & CO-OP
+        // 6. HIJACK/SWAP SHIP, STEAL & SABOTAGE
         // ==========================================
         window.openInteractionModal = function(mode) {
+            if (!['hijack','steal','sabotage'].includes(mode)) return;
             const me = getMe();
             if (!me) return;
 
@@ -1221,16 +1205,6 @@ window.joinMultiplayerRoom = async function() {
             if ((mode === 'steal' || mode === 'sabotage') && me.energy < 20) {
                 showToast("Energi tidak cukup (butuh 20 Energi)!", "error");
                 return;
-            }
-            if (mode === 'coop') {
-                if ((me.coopCooldown || 0) > 0) {
-                    showToast(`Kerja sama sedang jeda! Tunggu ${me.coopCooldown} giliran memancing lagi.`, "warning");
-                    return;
-                }
-                if (me.energy < 10) {
-                    showToast("Energi tidak cukup untuk kerja sama (butuh 10 Energi)!", "error");
-                    return;
-                }
             }
 
             currentInteractionMode = mode;
@@ -1248,9 +1222,6 @@ window.joinMultiplayerRoom = async function() {
             } else if (mode === 'sabotage') {
                 titleEl.textContent = "💣 Sabotage Jaring Lawan";
                 descEl.textContent = "Jawab soal Narrative Text untuk menguras 30 Energi kapal target (-20 Energi)!";
-            } else {
-                titleEl.textContent = "🤝 Kerja Sama Ekspedisi";
-                descEl.textContent = "Jawab soal Biography untuk memberi bonus koin & energi bagi dirimu dan 1 rekan!";
             }
 
             window.filterInteractionTargets();
@@ -1321,9 +1292,6 @@ window.joinMultiplayerRoom = async function() {
             } else if (currentInteractionMode === 'sabotage') {
                 await syncPlayerUpdate(me.uid, { energy: me.energy - 20, updatedAt: Date.now() });
                 openQuizChallenge('narrative', 'sabotage', targetUid);
-            } else if (currentInteractionMode === 'coop') {
-                await syncPlayerUpdate(me.uid, { energy: me.energy - 10, coopCooldown: 3, updatedAt: Date.now() });
-                openQuizChallenge('biography', 'coop', targetUid);
             }
         };
 
@@ -1406,19 +1374,18 @@ function openQuizChallenge(topic, actionType, targetUid) { if(classBlocked())ret
 
         
 async function performPvp(kind,target){
- if(classBlocked()||!firestoreEnabled||target===myUid)throw Error('Unavailable');
+ if(!['hijack','steal','sabotage'].includes(kind)||classBlocked()||!firestoreEnabled||target===myUid)throw Error('Unavailable');
  const base=['artifacts',appId,'public','data','room_'+currentRoomCode];
  const ar=doc(db,...base,myUid),br=doc(db,...base,target);
  await runTransaction(db,async tx=>{
  const as=await tx.get(ar),bs=await tx.get(br);if(!as.exists()||!bs.exists())throw Error('Player unavailable');
  const a=as.data(),b=bs.data(),now=Date.now(),cargo=x=>[...(x.cargo||[])],used=x=>x.reduce((n,f)=>n+(f.slots||1),0);
- if(kind!=='coop'&&(b.guardUntil||0)>now)throw Error('Ship protected by guard');
+ if((b.guardUntil||0)>now)throw Error('Ship protected by guard');
  let ap={},bp={};
  if(kind==='steal'){const bc=cargo(b),ac=cargo(a),fish=bc.pop();if(!fish||used(ac)+fish.slots>a.maxCargo)throw Error('No fish or cargo full');ap.cargo=[...ac,fish];bp.cargo=bc}
  if(kind==='sabotage')bp.energy=Math.max(0,b.energy-30);
- if(kind==='coop'){ap={coins:a.coins+45,energy:Math.min(a.maxEnergy,a.energy+25)};bp={coins:b.coins+45,energy:Math.min(b.maxEnergy,b.energy+25)}}
  if(kind==='hijack'){const specs=x=>({boatLevel:x.boatLevel,maxCargo:x.maxCargo,maxEnergy:x.maxEnergy,avatar:x.avatar});if(used(cargo(a))>b.maxCargo||used(cargo(b))>a.maxCargo)throw Error('Sell cargo before swapping ships');ap={...specs(b),energy:Math.min(b.maxEnergy,a.energy),hijackedFrom:b.name};bp={...specs(a),energy:Math.min(a.maxEnergy,b.energy),hijackedFrom:null}}
- const log=({'hijack':'⚔️ '+a.name+' membajak kapal '+b.name,'steal':'🏴‍☠️ '+a.name+' mencuri ikan dari kapal '+b.name,'sabotage':'💣 '+a.name+' menyabotase kapal '+b.name,'coop':'🤝 '+a.name+' & '+b.name+' kerja sama'})[kind];
+ const log=({'hijack':'⚔️ '+a.name+' membajak kapal '+b.name,'steal':'🏴‍☠️ '+a.name+' mencuri ikan dari kapal '+b.name,'sabotage':'💣 '+a.name+' menyabotase kapal '+b.name})[kind];
  tx.update(ar,{...ap,updatedAt:now,pvpAt:now,pvpTarget:target,pvpKind:kind});tx.update(br,{...bp,updatedAt:now,lastEvent:log,pvpBy:myUid,pvpAt:now,pvpKind:kind});
  });
 }
@@ -1487,7 +1454,7 @@ if (activeQuiz.actionType === 'fishing') {
                 });
 
                 showToast(`Mantap (${elapsed.toFixed(1)}s)! Dapat ${caughtFish.icon} ${caughtFish.name} (🪙${caughtFish.price})!`, "success");
-            } else if (['hijack','steal','sabotage','coop'].includes(activeQuiz.actionType)) {
+            } else if (['hijack','steal','sabotage'].includes(activeQuiz.actionType)) {
  const q=activeQuiz;activeQuiz=null;
  if(!isCorrect)return showToast('Challenge failed: incorrect answer','error');
  try{await performPvp(q.actionType,q.targetUid);showToast('Challenge successful!','success')}catch(e){showToast('Action failed: '+(e.code||e.message),'error')}
