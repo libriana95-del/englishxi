@@ -1,0 +1,25 @@
+name: Copy original game assets
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/copy-assets.yml'
+permissions:
+  contents: write
+jobs:
+  copy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Import assets
+        run: |
+          git clone --depth 1 https://github.com/libriana95-del/revieweng.git "$RUNNER_TEMP/original"
+          mkdir -p assets
+          cp -a "$RUNNER_TEMP/original/assets/." assets/
+          git add assets
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if ! git diff --cached --quiet; then
+            git commit -m "Copy original EngReview assets"
+            git push
+          fi
