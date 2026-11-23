@@ -1,0 +1,2189 @@
+{
+  "version": 1,
+  "curriculum": "English Wajib XI",
+  "count": 150,
+  "questions": [
+    {
+      "topic": "suggestion",
+      "id": 1,
+      "q": "Nina: I keep forgetting new vocabulary. Rafi: ...",
+      "options": [
+        "Did you review them last month?",
+        "You must have forgotten yesterday.",
+        "Would you like me to forget them?",
+        "Why don't you review a few words every evening?",
+        "I believe vocabulary is difficult."
+      ],
+      "answer": 3
+    },
+    {
+      "topic": "suggestion",
+      "id": 2,
+      "q": "A friend has an important interview tomorrow but has not prepared. Which suggestion is most practical?",
+      "options": [
+        "You could wait until the interview is over to prepare.",
+        "You should have attended the interview yesterday.",
+        "You could rehearse common interview questions tonight.",
+        "You might cancel every future interview.",
+        "You must already know all the answers."
+      ],
+      "answer": 2
+    },
+    {
+      "topic": "suggestion",
+      "id": 3,
+      "q": "Which expression introduces a suggestion rather than an offer?",
+      "options": [
+        "Shall I carry your bag?",
+        "How about taking a short break?",
+        "Let me open the door for you.",
+        "Would you like some water?",
+        "Can I help you with that?"
+      ],
+      "answer": 1
+    },
+    {
+      "topic": "suggestion",
+      "id": 4,
+      "q": "Choose the grammatically correct suggestion.",
+      "options": [
+        "I suggest that we revise the introduction.",
+        "I suggest us to revising the introduction.",
+        "I suggest to we revise the introduction.",
+        "I suggest that we revises the introduction.",
+        "I suggest that revising we the introduction."
+      ],
+      "answer": 0
+    },
+    {
+      "topic": "suggestion",
+      "id": 5,
+      "q": "Dena: Let's meet at seven. Fara: I have a class until eight. ...",
+      "options": [
+        "Seven sounds perfect; I will be there.",
+        "Could we meet at nine instead?",
+        "I refuse to discuss any other time.",
+        "I have already met you at seven.",
+        "You should attend my class at seven."
+      ],
+      "answer": 1
+    },
+    {
+      "topic": "suggestion",
+      "id": 6,
+      "q": "Which response politely declines a suggestion while giving a reason?",
+      "options": [
+        "Your suggestion is completely useless.",
+        "That's a brilliant idea; count me in.",
+        "Thanks, but I need to finish my assignment first.",
+        "Why did you even suggest that?",
+        "Fine, I will follow your plan exactly."
+      ],
+      "answer": 2
+    },
+    {
+      "topic": "suggestion",
+      "id": 7,
+      "q": "If the aim is to reduce paper waste, which suggestion addresses it directly?",
+      "options": [
+        "Let's print a copy for every visitor.",
+        "How about replacing all classroom chairs?",
+        "We could use thicker paper for every draft.",
+        "Why not print on both sides of each sheet?",
+        "Why not buy a larger printer?"
+      ],
+      "answer": 3
+    },
+    {
+      "topic": "suggestion",
+      "id": 8,
+      "q": "Complete: How about ... the discussion until everyone arrives?",
+      "options": [
+        "postpone",
+        "to postpone",
+        "postponed",
+        "postponing",
+        "postpones"
+      ],
+      "answer": 3
+    },
+    {
+      "topic": "suggestion",
+      "id": 9,
+      "q": "Complete: You had better ... the instructions before using the machine.",
+      "options": [
+        "to read",
+        "have reading",
+        "read",
+        "reads",
+        "reading"
+      ],
+      "answer": 2
+    },
+    {
+      "topic": "suggestion",
+      "id": 10,
+      "q": "Which sentence is a tentative suggestion rather than a strict command?",
+      "options": [
+        "You are required to change your approach.",
+        "You must follow my approach.",
+        "You are forbidden to use your approach.",
+        "Change your approach immediately.",
+        "Perhaps we could try a different approach."
+      ],
+      "answer": 4
+    },
+    {
+      "topic": "suggestion",
+      "id": 11,
+      "q": "A student says, “If I were you, I would speak to the teacher privately.” What is the function?",
+      "options": [
+        "Offering to speak on the student's behalf.",
+        "Expressing certainty about the teacher's reaction.",
+        "Reporting a conversation with the teacher.",
+        "Giving advice from another person's perspective.",
+        "Requesting permission to teach a class."
+      ],
+      "answer": 3
+    },
+    {
+      "topic": "suggestion",
+      "id": 12,
+      "q": "Which revision preserves the meaning of “Why not take the earlier train?”",
+      "options": [
+        "You should avoid the earlier train.",
+        "You took the earlier train.",
+        "You could take the earlier train.",
+        "You must have missed the earlier train.",
+        "You cannot take the earlier train."
+      ],
+      "answer": 2
+    },
+    {
+      "topic": "suggestion",
+      "id": 13,
+      "q": "Reno: The group cannot agree on a topic. Which suggestion encourages fair participation?",
+      "options": [
+        "We should ignore members who disagree.",
+        "Why not select a topic before hearing anyone?",
+        "Let's allow each member to propose an idea before voting.",
+        "Let the loudest member decide immediately.",
+        "Let's remove anyone who has another idea."
+      ],
+      "answer": 2
+    },
+    {
+      "topic": "suggestion",
+      "id": 14,
+      "q": "Which response accepts a suggestion but adds a condition?",
+      "options": [
+        "That works, as long as we finish before noon.",
+        "That is not possible at any time.",
+        "I already finished it yesterday.",
+        "I have no idea what you are suggesting.",
+        "I won't consider it under any circumstances."
+      ],
+      "answer": 0
+    },
+    {
+      "topic": "suggestion",
+      "id": 15,
+      "q": "Choose the correct arrangement: we / why / ask / don't / for feedback / ?",
+      "options": [
+        "Don't why we ask for feedback?",
+        "Why don't we ask for feedback?",
+        "Why we ask don't for feedback?",
+        "Why don't ask we for feedback?",
+        "Why we don't ask for feedback?"
+      ],
+      "answer": 1
+    },
+    {
+      "topic": "suggestion",
+      "id": 16,
+      "q": "“Our budget is limited.” Which suggestion best respects this constraint?",
+      "options": [
+        "We should purchase the most expensive model.",
+        "Let's ignore the total cost until later.",
+        "We ought to order extra equipment just in case.",
+        "We could borrow the equipment rather than buy it.",
+        "Why not double the spending immediately?"
+      ],
+      "answer": 3
+    },
+    {
+      "topic": "suggestion",
+      "id": 17,
+      "q": "Which expression gives advice about a past mistake?",
+      "options": [
+        "You should have checked the date before submitting.",
+        "Why don't you check the date today?",
+        "You could check the date now.",
+        "You should check the date tomorrow.",
+        "You had better check the date next time."
+      ],
+      "answer": 0
+    },
+    {
+      "topic": "suggestion",
+      "id": 18,
+      "q": "A friend proposes studying all night before a test. Which reply offers a constructive alternative?",
+      "options": [
+        "I will study all night regardless of the consequences.",
+        "I agree that sleep is completely unnecessary.",
+        "You should cancel the test instead.",
+        "Your idea is ridiculous and not worth discussing.",
+        "Wouldn't it be better to study earlier and get enough sleep?"
+      ],
+      "answer": 4
+    },
+    {
+      "topic": "suggestion",
+      "id": 19,
+      "q": "Complete: The counselor recommended ... a realistic study schedule.",
+      "options": [
+        "creating",
+        "creates",
+        "create",
+        "to creating",
+        "created"
+      ],
+      "answer": 0
+    },
+    {
+      "topic": "suggestion",
+      "id": 20,
+      "q": "Which suggestion avoids assuming the listener has money to spend?",
+      "options": [
+        "You ought to enroll in an expensive course.",
+        "You should hire a private tutor immediately.",
+        "Let's buy a new laptop first.",
+        "Have you considered using free learning resources?",
+        "Why not purchase a premium subscription?"
+      ],
+      "answer": 3
+    },
+    {
+      "topic": "opinion",
+      "id": 21,
+      "q": "Which question asks for an opinion?",
+      "options": [
+        "What is your view on the new school policy?",
+        "When was the policy announced?",
+        "Where is the policy displayed?",
+        "Who printed the policy?",
+        "How many pages does the policy have?"
+      ],
+      "answer": 0
+    },
+    {
+      "topic": "opinion",
+      "id": 22,
+      "q": "Which statement is an opinion rather than a verifiable fact?",
+      "options": [
+        "The library has twelve tables.",
+        "The library is on the second floor.",
+        "The library opens at seven each weekday.",
+        "The new library is the most welcoming room in school.",
+        "The library received fifty books on Monday."
+      ],
+      "answer": 3
+    },
+    {
+      "topic": "opinion",
+      "id": 23,
+      "q": "A: I think uniforms reduce pressure to follow fashion. B: ... Which response disagrees respectfully?",
+      "options": [
+        "I see your point, but uniforms may limit self-expression.",
+        "I completely support your argument.",
+        "Exactly; I have the same view.",
+        "That is a fact nobody can question.",
+        "You clearly know nothing about uniforms."
+      ],
+      "answer": 0
+    },
+    {
+      "topic": "opinion",
+      "id": 24,
+      "q": "Which expression presents an opinion with appropriate caution?",
+      "options": [
+        "There is no possible alternative to my view.",
+        "It seems to me that the plan may need revision.",
+        "The plan is unquestionably wrong in every respect.",
+        "Everyone knows the plan is bad.",
+        "Only an ignorant person would support it."
+      ],
+      "answer": 1
+    },
+    {
+      "topic": "opinion",
+      "id": 25,
+      "q": "Which statement provides a reason for an opinion?",
+      "options": [
+        "I favor group projects more than others do.",
+        "I favor group projects; do you agree?",
+        "I favor group projects, and that is my opinion.",
+        "I favor group projects because they develop collaboration.",
+        "I favor group projects, obviously."
+      ],
+      "answer": 3
+    },
+    {
+      "topic": "opinion",
+      "id": 26,
+      "q": "Complete: In my view, the benefits ... the disadvantages.",
+      "options": [
+        "outweigh",
+        "outweighing",
+        "to outweigh",
+        "has outweigh",
+        "outweighs"
+      ],
+      "answer": 0
+    },
+    {
+      "topic": "opinion",
+      "id": 27,
+      "q": "Which reply expresses partial agreement?",
+      "options": [
+        "I fully support every point you made.",
+        "I refuse to evaluate your argument.",
+        "I agree about the cost, but not about the proposed schedule.",
+        "I cannot understand any of your statements.",
+        "I disagree with every part of your argument."
+      ],
+      "answer": 2
+    },
+    {
+      "topic": "opinion",
+      "id": 28,
+      "q": "A speaker claims that all teenagers dislike reading because two friends do. What is the main weakness?",
+      "options": [
+        "The claim includes too much statistical evidence.",
+        "The claim is supported by every teenager.",
+        "The conclusion relies on an insufficient sample.",
+        "The speaker uses a formal expression of opinion.",
+        "The speaker avoids making a generalization."
+      ],
+      "answer": 2
+    },
+    {
+      "topic": "opinion",
+      "id": 29,
+      "q": "Which sentence distinguishes evidence from opinion clearly?",
+      "options": [
+        "Everyone agrees that the survey is perfect.",
+        "I think the survey exists, so its findings are certainly true.",
+        "Longer study time proves that my opinion is always correct.",
+        "The survey is encouraging, so every student must study longer.",
+        "The survey reports longer study time; I think that is encouraging."
+      ],
+      "answer": 4
+    },
+    {
+      "topic": "opinion",
+      "id": 30,
+      "q": "Which question invites a reasoned opinion rather than a yes-or-no answer?",
+      "options": [
+        "Has the proposal been approved?",
+        "Do you support the proposal?",
+        "What makes you support or oppose the proposal?",
+        "Did you read the proposal?",
+        "Is the proposal available online?"
+      ],
+      "answer": 2
+    },
+    {
+      "topic": "opinion",
+      "id": 31,
+      "q": "“From my perspective, the rule is too restrictive.” The phrase “from my perspective” signals ...",
+      "options": [
+        "a verified measurement.",
+        "an instruction to the listener.",
+        "a chronological sequence.",
+        "a personal viewpoint.",
+        "an offer of assistance."
+      ],
+      "answer": 3
+    },
+    {
+      "topic": "opinion",
+      "id": 32,
+      "q": "Which response challenges an opinion by requesting evidence?",
+      "options": [
+        "Can you stop speaking now?",
+        "Why are you always wrong?",
+        "What findings support your claim?",
+        "Do you want me to agree anyway?",
+        "What is your favorite color?"
+      ],
+      "answer": 2
+    },
+    {
+      "topic": "opinion",
+      "id": 33,
+      "q": "Choose the grammatically correct expression.",
+      "options": [
+        "I believing that students need regular feedback.",
+        "I believe that students need regular feedback.",
+        "I believe that students needing regular feedback.",
+        "I am believe that students need regular feedback.",
+        "I believe students needs regular feedback."
+      ],
+      "answer": 1
+    },
+    {
+      "topic": "opinion",
+      "id": 34,
+      "q": "Mira argues that parking should be limited to reduce congestion. Which evidence is most relevant?",
+      "options": [
+        "A list of teachers' favorite vehicles.",
+        "The colors of cars parked near the gate.",
+        "Traffic counts before and after parking restrictions.",
+        "A photograph of an empty classroom.",
+        "The number of books in the school library."
+      ],
+      "answer": 2
+    },
+    {
+      "topic": "opinion",
+      "id": 35,
+      "q": "Which statement acknowledges an opposing view before presenting a position?",
+      "options": [
+        "I prefer face-to-face discussion because everyone must agree.",
+        "Online learning exists in many countries.",
+        "Online learning is flexible and has no disadvantages.",
+        "Although online learning is flexible, I prefer face-to-face discussion.",
+        "I refuse to consider online learning."
+      ],
+      "answer": 3
+    },
+    {
+      "topic": "opinion",
+      "id": 36,
+      "q": "What is closest in meaning to “I am inclined to agree”?",
+      "options": [
+        "I demand that others share that view.",
+        "I reject that view entirely.",
+        "I cannot form any opinion.",
+        "I tend to share that view.",
+        "I have proved that view wrong."
+      ],
+      "answer": 3
+    },
+    {
+      "topic": "opinion",
+      "id": 37,
+      "q": "Which phrase is most suitable for a formal discussion?",
+      "options": [
+        "Nah, that plan is super weird.",
+        "In my assessment, the proposal requires further consideration.",
+        "Trust me, I'm always right.",
+        "Whatever, just do it.",
+        "That idea is totally messed up."
+      ],
+      "answer": 1
+    },
+    {
+      "topic": "opinion",
+      "id": 38,
+      "q": "Which reply demonstrates open-mindedness?",
+      "options": [
+        "My first impression is enough to prove everything.",
+        "I disagree, so your evidence is irrelevant.",
+        "New evidence will never change my position.",
+        "Your evidence makes me reconsider my initial position.",
+        "I will accept only evidence that supports me."
+      ],
+      "answer": 3
+    },
+    {
+      "topic": "opinion",
+      "id": 39,
+      "q": "Which statement is a balanced evaluation of a school event?",
+      "options": [
+        "The event was engaging, although the schedule could have been clearer.",
+        "The event was perfect because I enjoyed it.",
+        "Nobody could possibly dislike the event.",
+        "The event was terrible because one activity started late.",
+        "Every student must have enjoyed the event."
+      ],
+      "answer": 0
+    },
+    {
+      "topic": "opinion",
+      "id": 40,
+      "q": "“Public transport is preferable to private cars in crowded cities.” Which is the strongest supporting reason?",
+      "options": [
+        "Bus drivers wear different uniforms.",
+        "Many cars are sold in different sizes.",
+        "Some buses are painted in attractive colors.",
+        "Private cars often have comfortable seats.",
+        "Buses can carry many passengers using less road space per person."
+      ],
+      "answer": 4
+    },
+    {
+      "topic": "offering",
+      "id": 41,
+      "q": "A visitor is carrying several heavy boxes. Which expression offers assistance?",
+      "options": [
+        "Where did you buy those boxes?",
+        "Would you carry my boxes for me?",
+        "Would you like me to carry one of those?",
+        "I think the boxes are too heavy.",
+        "You should carry fewer boxes."
+      ],
+      "answer": 2
+    },
+    {
+      "topic": "offering",
+      "id": 42,
+      "q": "Complete: Shall I ... the window for you?",
+      "options": [
+        "to open",
+        "open",
+        "opens",
+        "opened",
+        "opening"
+      ],
+      "answer": 1
+    },
+    {
+      "topic": "offering",
+      "id": 43,
+      "q": "Which expression is a request rather than an offer?",
+      "options": [
+        "Could you lend me your pen?",
+        "May I lend you a pen?",
+        "Let me find you a pen.",
+        "Would you like to borrow my pen?",
+        "Shall I get you a pen?"
+      ],
+      "answer": 0
+    },
+    {
+      "topic": "offering",
+      "id": 44,
+      "q": "A: Would you like another cup of tea? B: ... Which response politely refuses?",
+      "options": [
+        "No, thank you. I've had enough.",
+        "Yes, please. That would be lovely.",
+        "That sounds wonderful; thank you.",
+        "Certainly, I would appreciate it.",
+        "I'd love another cup, please."
+      ],
+      "answer": 0
+    },
+    {
+      "topic": "offering",
+      "id": 45,
+      "q": "A: Can I help you find the document? B: ... Which reply accepts the offer?",
+      "options": [
+        "Yes, please. I can't locate the latest version.",
+        "No, thanks. I have already found it.",
+        "I appreciate it, but I can manage.",
+        "That's kind, but there is no need.",
+        "Perhaps another time; I'm finished now."
+      ],
+      "answer": 0
+    },
+    {
+      "topic": "offering",
+      "id": 46,
+      "q": "A customer cannot reach an item on a high shelf. What should the assistant say?",
+      "options": [
+        "Could you get that item down for me?",
+        "Why don't you climb the shelf?",
+        "I think the shelf is too high.",
+        "You must move the shelf yourself.",
+        "May I get that item down for you?"
+      ],
+      "answer": 4
+    },
+    {
+      "topic": "offering",
+      "id": 47,
+      "q": "Which offer respects the listener's choice?",
+      "options": [
+        "You have no choice but to accept my help.",
+        "I will take over whether you want help or not.",
+        "Give me your work immediately.",
+        "I have already changed your work without asking.",
+        "Would you like some help, or would you prefer to try first?"
+      ],
+      "answer": 4
+    },
+    {
+      "topic": "offering",
+      "id": 48,
+      "q": "Complete: Would you like me ... the file by email?",
+      "options": [
+        "sent",
+        "sending",
+        "to send",
+        "send",
+        "to sending"
+      ],
+      "answer": 2
+    },
+    {
+      "topic": "offering",
+      "id": 49,
+      "q": "A: I can proofread your essay if you want. What is the implied meaning?",
+      "options": [
+        "The speaker refuses to read the essay.",
+        "The speaker is willing to help but leaves the decision to the listener.",
+        "The speaker orders the listener to proofread it.",
+        "The speaker has already corrected the essay.",
+        "The speaker demands permission to rewrite the essay."
+      ],
+      "answer": 1
+    },
+    {
+      "topic": "offering",
+      "id": 50,
+      "q": "Which sentence offers a service in a formal setting?",
+      "options": [
+        "May I assist you with your registration?",
+        "You'd better register now.",
+        "Why haven't you registered yet?",
+        "Want me to sort that stuff out?",
+        "Give me your registration form."
+      ],
+      "answer": 0
+    },
+    {
+      "topic": "offering",
+      "id": 51,
+      "q": "A: I'll give you a ride home. B: Thanks, but my sister is picking me up. What does B do?",
+      "options": [
+        "Declines the offer and explains why.",
+        "Accepts the ride with a condition.",
+        "Offers A a ride in return.",
+        "Expresses dissatisfaction with the vehicle.",
+        "Asks A to pick up the sister."
+      ],
+      "answer": 0
+    },
+    {
+      "topic": "offering",
+      "id": 52,
+      "q": "Which offer is most appropriate when a classmate misses a lesson?",
+      "options": [
+        "You should skip the next lesson too.",
+        "You must copy my homework exactly.",
+        "Could you give me your notes?",
+        "I think you were absent yesterday.",
+        "I can share my notes if that would help."
+      ],
+      "answer": 4
+    },
+    {
+      "topic": "offering",
+      "id": 53,
+      "q": "Choose the correctly ordered offer: help / I / you / may / with your luggage / ?",
+      "options": [
+        "May I help you with your luggage?",
+        "May I you help with your luggage?",
+        "May you help I with your luggage?",
+        "I may you help with your luggage?",
+        "Help may I with your luggage you?"
+      ],
+      "answer": 0
+    },
+    {
+      "topic": "offering",
+      "id": 54,
+      "q": "Which expression offers an alternative after an initial offer is declined?",
+      "options": [
+        "You must accept my original offer.",
+        "You should not have declined my offer.",
+        "I will do it anyway without asking.",
+        "No problem. I can email the information instead, if you prefer.",
+        "Then I refuse to help you ever again."
+      ],
+      "answer": 3
+    },
+    {
+      "topic": "offering",
+      "id": 55,
+      "q": "A guest looks cold. Which offer responds directly to the situation?",
+      "options": [
+        "Could you bring me a blanket?",
+        "You should buy a new house.",
+        "Would you like me to bring you a blanket?",
+        "Why did you forget your jacket?",
+        "I believe winter is colder than summer."
+      ],
+      "answer": 2
+    },
+    {
+      "topic": "offering",
+      "id": 56,
+      "q": "Which sentence expresses willingness to help rather than a suggestion that the listener act?",
+      "options": [
+        "You could print the tickets at home.",
+        "How about printing your tickets yourself?",
+        "You should print the tickets now.",
+        "Why don't you print the tickets?",
+        "I could print the tickets for you."
+      ],
+      "answer": 4
+    },
+    {
+      "topic": "offering",
+      "id": 57,
+      "q": "A volunteer has only ten minutes available. Which offer sets a realistic limit?",
+      "options": [
+        "I will take responsibility for every remaining task.",
+        "I can complete everything instantly.",
+        "I can help you organize the first few boxes before I leave.",
+        "I promise to stay all afternoon.",
+        "I will finish the entire project no matter how long it takes."
+      ],
+      "answer": 2
+    },
+    {
+      "topic": "offering",
+      "id": 58,
+      "q": "A: Let me explain the instructions again. B: I think I've understood them now, thanks. What is B's intention?",
+      "options": [
+        "To accept an offer of printed notes.",
+        "To offer to explain the instructions to A.",
+        "To decline further explanation politely.",
+        "To criticize the instructions as incorrect.",
+        "To request a complete repetition."
+      ],
+      "answer": 2
+    },
+    {
+      "topic": "offering",
+      "id": 59,
+      "q": "Choose the correct response to “Would you mind if I helped you?” when help is welcome.",
+      "options": [
+        "Not at all. I'd appreciate that.",
+        "No, I would rather you didn't, because I accept.",
+        "I mind very much, so go ahead.",
+        "Yes, I mind; please help immediately.",
+        "Yes, please don't help me; I need your help."
+      ],
+      "answer": 0
+    },
+    {
+      "topic": "offering",
+      "id": 60,
+      "q": "Which offer best addresses a visitor who cannot read a sign in English?",
+      "options": [
+        "Why don't you ignore the sign?",
+        "You should learn English before visiting.",
+        "I think the sign is written in English.",
+        "Can you translate the sign for me?",
+        "Would you like me to explain what the sign says?"
+      ],
+      "answer": 4
+    },
+    {
+      "topic": "description",
+      "id": 61,
+      "q": "What is the main focus of the passage?",
+      "options": [
+        "The process of constructing a warehouse.",
+        "The history of trade along the river.",
+        "The layout, features and atmosphere of a reading room.",
+        "The rules for organizing workshops.",
+        "The reasons for closing a market."
+      ],
+      "answer": 2,
+      "passage": "The Riverside Reading Room\nThe Riverside Reading Room occupies a renovated warehouse beside a narrow river. Its high ceiling\nand broad windows make the interior feel spacious despite its modest floor area. Shelves stand along\nthe brick walls, leaving the central space open for group discussions. A quiet corner behind a glass\npartition is reserved for individual readers. Unlike the busy market across the river, the reading room\nhas a calm atmosphere. However, the open central area sometimes becomes noisy during\nworkshops."
+    },
+    {
+      "topic": "description",
+      "id": 62,
+      "q": "Why is the glass partition useful?",
+      "options": [
+        "It enlarges the actual floor area.",
+        "It separates individual readers from group activities.",
+        "It connects the building to the river.",
+        "It blocks every sound from the market.",
+        "It replaces the need for bookshelves."
+      ],
+      "answer": 1,
+      "passage": "The Riverside Reading Room\nThe Riverside Reading Room occupies a renovated warehouse beside a narrow river. Its high ceiling\nand broad windows make the interior feel spacious despite its modest floor area. Shelves stand along\nthe brick walls, leaving the central space open for group discussions. A quiet corner behind a glass\npartition is reserved for individual readers. Unlike the busy market across the river, the reading room\nhas a calm atmosphere. However, the open central area sometimes becomes noisy during\nworkshops."
+    },
+    {
+      "topic": "description",
+      "id": 63,
+      "q": "The word “modest” is closest in meaning to ...",
+      "options": [
+        "limited in size.",
+        "unusually expensive.",
+        "poorly maintained.",
+        "completely empty.",
+        "visually impressive."
+      ],
+      "answer": 0,
+      "passage": "The Riverside Reading Room\nThe Riverside Reading Room occupies a renovated warehouse beside a narrow river. Its high ceiling\nand broad windows make the interior feel spacious despite its modest floor area. Shelves stand along\nthe brick walls, leaving the central space open for group discussions. A quiet corner behind a glass\npartition is reserved for individual readers. Unlike the busy market across the river, the reading room\nhas a calm atmosphere. However, the open central area sometimes becomes noisy during\nworkshops."
+    },
+    {
+      "topic": "description",
+      "id": 64,
+      "q": "Which detail qualifies the description of the room as calm?",
+      "options": [
+        "The market is across the river.",
+        "The building has broad windows.",
+        "Workshops can make the central area noisy.",
+        "The shelves stand along the walls.",
+        "The building was once a warehouse."
+      ],
+      "answer": 2,
+      "passage": "The Riverside Reading Room\nThe Riverside Reading Room occupies a renovated warehouse beside a narrow river. Its high ceiling\nand broad windows make the interior feel spacious despite its modest floor area. Shelves stand along\nthe brick walls, leaving the central space open for group discussions. A quiet corner behind a glass\npartition is reserved for individual readers. Unlike the busy market across the river, the reading room\nhas a calm atmosphere. However, the open central area sometimes becomes noisy during\nworkshops."
+    },
+    {
+      "topic": "description",
+      "id": 65,
+      "q": "What is opposite in meaning to “spacious”?",
+      "options": [
+        "vacant",
+        "accessible",
+        "bright",
+        "peaceful",
+        "cramped"
+      ],
+      "answer": 4,
+      "passage": "The Riverside Reading Room\nThe Riverside Reading Room occupies a renovated warehouse beside a narrow river. Its high ceiling\nand broad windows make the interior feel spacious despite its modest floor area. Shelves stand along\nthe brick walls, leaving the central space open for group discussions. A quiet corner behind a glass\npartition is reserved for individual readers. Unlike the busy market across the river, the reading room\nhas a calm atmosphere. However, the open central area sometimes becomes noisy during\nworkshops."
+    },
+    {
+      "topic": "description",
+      "id": 66,
+      "q": "Which statement is supported by the passage?",
+      "options": [
+        "All displays are located on the roof terrace.",
+        "The galleries display objects connected with local life.",
+        "The museum stands directly on the harbor.",
+        "The exterior is made entirely of dark wood.",
+        "Visitors can enter the terrace in any weather."
+      ],
+      "answer": 1,
+      "passage": "A Hilltop Museum\nThe Arunika Museum sits on a hill overlooking a fictional coastal town. Its exterior is covered with pale\nstone, while its interior combines dark wooden floors and white display panels. A gently sloping ramp\nconnects the three exhibition levels. The upper gallery contains models of fishing vessels, and the\nlower gallery displays ordinary household objects from earlier generations. The roof terrace offers an\nunobstructed view of the harbor, although visitors cannot access it during heavy rain."
+    },
+    {
+      "topic": "description",
+      "id": 67,
+      "q": "What is the likely advantage of the ramp?",
+      "options": [
+        "Visitors can see the harbor from every point.",
+        "The ramp prevents heavy rain from reaching the terrace.",
+        "Visitors can move between levels without relying solely on stairs.",
+        "The ramp allows boats to enter the museum.",
+        "Visitors can avoid passing through every exhibition."
+      ],
+      "answer": 2,
+      "passage": "A Hilltop Museum\nThe Arunika Museum sits on a hill overlooking a fictional coastal town. Its exterior is covered with pale\nstone, while its interior combines dark wooden floors and white display panels. A gently sloping ramp\nconnects the three exhibition levels. The upper gallery contains models of fishing vessels, and the\nlower gallery displays ordinary household objects from earlier generations. The roof terrace offers an\nunobstructed view of the harbor, although visitors cannot access it during heavy rain."
+    },
+    {
+      "topic": "description",
+      "id": 68,
+      "q": "What does “unobstructed” mean in context?",
+      "options": [
+        "Not blocked by anything.",
+        "Not visible at all.",
+        "Not connected to the harbor.",
+        "Not designed for visitors.",
+        "Not safe to approach."
+      ],
+      "answer": 0,
+      "passage": "A Hilltop Museum\nThe Arunika Museum sits on a hill overlooking a fictional coastal town. Its exterior is covered with pale\nstone, while its interior combines dark wooden floors and white display panels. A gently sloping ramp\nconnects the three exhibition levels. The upper gallery contains models of fishing vessels, and the\nlower gallery displays ordinary household objects from earlier generations. The roof terrace offers an\nunobstructed view of the harbor, although visitors cannot access it during heavy rain."
+    },
+    {
+      "topic": "description",
+      "id": 69,
+      "q": "Which phrase describes the exterior rather than the interior?",
+      "options": [
+        "white display panels",
+        "models of fishing vessels",
+        "dark wooden floors",
+        "covered with pale stone",
+        "household objects"
+      ],
+      "answer": 3,
+      "passage": "A Hilltop Museum\nThe Arunika Museum sits on a hill overlooking a fictional coastal town. Its exterior is covered with pale\nstone, while its interior combines dark wooden floors and white display panels. A gently sloping ramp\nconnects the three exhibition levels. The upper gallery contains models of fishing vessels, and the\nlower gallery displays ordinary household objects from earlier generations. The roof terrace offers an\nunobstructed view of the harbor, although visitors cannot access it during heavy rain."
+    },
+    {
+      "topic": "description",
+      "id": 70,
+      "q": "What is the function of “although” in the final sentence?",
+      "options": [
+        "To introduce the cause of the harbor view.",
+        "To contrast an attraction with a limitation.",
+        "To add a similar attraction.",
+        "To explain the purpose of the terrace.",
+        "To indicate the order of construction."
+      ],
+      "answer": 1,
+      "passage": "A Hilltop Museum\nThe Arunika Museum sits on a hill overlooking a fictional coastal town. Its exterior is covered with pale\nstone, while its interior combines dark wooden floors and white display panels. A gently sloping ramp\nconnects the three exhibition levels. The upper gallery contains models of fishing vessels, and the\nlower gallery displays ordinary household objects from earlier generations. The roof terrace offers an\nunobstructed view of the harbor, although visitors cannot access it during heavy rain."
+    },
+    {
+      "topic": "description",
+      "id": 71,
+      "q": "Which conclusion is most reasonable?",
+      "options": [
+        "The courtyard suits small gatherings better than large events.",
+        "Students are prohibited from entering during lunch.",
+        "The courtyard is designed primarily for sports competitions.",
+        "The courtyard is wider than the main school building.",
+        "Every part of the courtyard receives equal sunlight."
+      ],
+      "answer": 0,
+      "passage": "The Cedar Courtyard\nBehind the main school building lies the Cedar Courtyard, a rectangular garden bordered by low\nhedges. Two stone paths cross at its center, where a circular pond reflects the sky. Benches beneath\nthe trees are usually occupied during lunch. The western side is shaded for most of the day, whereas\nthe eastern side receives direct sunlight in the morning. The courtyard is popular for informal\nconversations, but its narrow paths make it unsuitable for large assemblies."
+    },
+    {
+      "topic": "description",
+      "id": 72,
+      "q": "Where would a student most likely find shade during the day?",
+      "options": [
+        "On the eastern side.",
+        "In the middle of the pond.",
+        "On every path equally.",
+        "Outside the main entrance.",
+        "On the western side."
+      ],
+      "answer": 4,
+      "passage": "The Cedar Courtyard\nBehind the main school building lies the Cedar Courtyard, a rectangular garden bordered by low\nhedges. Two stone paths cross at its center, where a circular pond reflects the sky. Benches beneath\nthe trees are usually occupied during lunch. The western side is shaded for most of the day, whereas\nthe eastern side receives direct sunlight in the morning. The courtyard is popular for informal\nconversations, but its narrow paths make it unsuitable for large assemblies."
+    },
+    {
+      "topic": "description",
+      "id": 73,
+      "q": "Which word best replaces “bordered” in context?",
+      "options": [
+        "reflected",
+        "surrounded",
+        "occupied",
+        "removed",
+        "divided"
+      ],
+      "answer": 1,
+      "passage": "The Cedar Courtyard\nBehind the main school building lies the Cedar Courtyard, a rectangular garden bordered by low\nhedges. Two stone paths cross at its center, where a circular pond reflects the sky. Benches beneath\nthe trees are usually occupied during lunch. The western side is shaded for most of the day, whereas\nthe eastern side receives direct sunlight in the morning. The courtyard is popular for informal\nconversations, but its narrow paths make it unsuitable for large assemblies."
+    },
+    {
+      "topic": "description",
+      "id": 74,
+      "q": "Which feature is circular?",
+      "options": [
+        "The school building.",
+        "The stone paths.",
+        "The hedges.",
+        "The courtyard.",
+        "The pond."
+      ],
+      "answer": 4,
+      "passage": "The Cedar Courtyard\nBehind the main school building lies the Cedar Courtyard, a rectangular garden bordered by low\nhedges. Two stone paths cross at its center, where a circular pond reflects the sky. Benches beneath\nthe trees are usually occupied during lunch. The western side is shaded for most of the day, whereas\nthe eastern side receives direct sunlight in the morning. The courtyard is popular for informal\nconversations, but its narrow paths make it unsuitable for large assemblies."
+    },
+    {
+      "topic": "description",
+      "id": 75,
+      "q": "The word “whereas” establishes a contrast between ...",
+      "options": [
+        "the students and the benches.",
+        "the garden and the main building.",
+        "the lighting conditions on two sides.",
+        "the shape of the pond and the paths.",
+        "the size of the trees and hedges."
+      ],
+      "answer": 2,
+      "passage": "The Cedar Courtyard\nBehind the main school building lies the Cedar Courtyard, a rectangular garden bordered by low\nhedges. Two stone paths cross at its center, where a circular pond reflects the sky. Benches beneath\nthe trees are usually occupied during lunch. The western side is shaded for most of the day, whereas\nthe eastern side receives direct sunlight in the morning. The courtyard is popular for informal\nconversations, but its narrow paths make it unsuitable for large assemblies."
+    },
+    {
+      "topic": "description",
+      "id": 76,
+      "q": "Which similarity is explicitly mentioned?",
+      "options": [
+        "Both venues are equally large.",
+        "Both venues have fixed seating.",
+        "Both venues have wide stages.",
+        "Both venues have a formal atmosphere.",
+        "Both venues have accessible entrances."
+      ],
+      "answer": 4,
+      "passage": "Two Community Spaces\nThe North Hall and the South Studio are community venues in the same district. North Hall has a wide\nstage and rows of fixed seats, making it suitable for lectures and performances. South Studio is\nsmaller, but its movable furniture allows visitors to rearrange the room for workshops. Both buildings\nhave accessible entrances and natural lighting. North Hall tends to feel formal, while South Studio has\na more relaxed atmosphere."
+    },
+    {
+      "topic": "description",
+      "id": 77,
+      "q": "Which venue is better suited to an activity requiring frequent changes in seating?",
+      "options": [
+        "Neither venue, because both lack natural lighting.",
+        "North Hall, because its seating is fixed.",
+        "Either venue, because both have identical seating.",
+        "South Studio, because its furniture is movable.",
+        "North Hall, because it has a formal atmosphere."
+      ],
+      "answer": 3,
+      "passage": "Two Community Spaces\nThe North Hall and the South Studio are community venues in the same district. North Hall has a wide\nstage and rows of fixed seats, making it suitable for lectures and performances. South Studio is\nsmaller, but its movable furniture allows visitors to rearrange the room for workshops. Both buildings\nhave accessible entrances and natural lighting. North Hall tends to feel formal, while South Studio has\na more relaxed atmosphere."
+    },
+    {
+      "topic": "description",
+      "id": 78,
+      "q": "What is the primary purpose of the passage?",
+      "options": [
+        "To provide directions between the venues.",
+        "To compare the characteristics of two community venues.",
+        "To explain how to construct a stage.",
+        "To persuade readers to close one venue.",
+        "To narrate a performance in North Hall."
+      ],
+      "answer": 1,
+      "passage": "Two Community Spaces\nThe North Hall and the South Studio are community venues in the same district. North Hall has a wide\nstage and rows of fixed seats, making it suitable for lectures and performances. South Studio is\nsmaller, but its movable furniture allows visitors to rearrange the room for workshops. Both buildings\nhave accessible entrances and natural lighting. North Hall tends to feel formal, while South Studio has\na more relaxed atmosphere."
+    },
+    {
+      "topic": "description",
+      "id": 79,
+      "q": "Which word is closest in meaning to “venues”?",
+      "options": [
+        "places for organized activities",
+        "rules for public meetings",
+        "people attending events",
+        "equipment used on stages",
+        "tickets for performances"
+      ],
+      "answer": 0,
+      "passage": "Two Community Spaces\nThe North Hall and the South Studio are community venues in the same district. North Hall has a wide\nstage and rows of fixed seats, making it suitable for lectures and performances. South Studio is\nsmaller, but its movable furniture allows visitors to rearrange the room for workshops. Both buildings\nhave accessible entrances and natural lighting. North Hall tends to feel formal, while South Studio has\na more relaxed atmosphere."
+    },
+    {
+      "topic": "description",
+      "id": 80,
+      "q": "Which sentence uses a correct comparative form?",
+      "options": [
+        "South Studio is more flexible than North Hall in seating arrangement.",
+        "South Studio is flexible more than North Hall.",
+        "South Studio is most flexible than North Hall.",
+        "South Studio is as flexible than North Hall.",
+        "South Studio is more flexibler than North Hall."
+      ],
+      "answer": 0,
+      "passage": "Two Community Spaces\nThe North Hall and the South Studio are community venues in the same district. North Hall has a wide\nstage and rows of fixed seats, making it suitable for lectures and performances. South Studio is\nsmaller, but its movable furniture allows visitors to rearrange the room for workshops. Both buildings\nhave accessible entrances and natural lighting. North Hall tends to feel formal, while South Studio has\na more relaxed atmosphere."
+    },
+    {
+      "topic": "description",
+      "id": 81,
+      "q": "Which sentence is most suitable as the identification of a descriptive text?",
+      "options": [
+        "The walls are decorated with colorful patterns.",
+        "Its windows are framed with polished wood.",
+        "Inside, visitors can find several exhibition areas.",
+        "Its roof is supported by six pillars.",
+        "The Lotus Pavilion is a small cultural center near the town square."
+      ],
+      "answer": 4
+    },
+    {
+      "topic": "description",
+      "id": 82,
+      "q": "Which sentence uses the simple present tense appropriately for a permanent feature?",
+      "options": [
+        "The building overlooks a lake.",
+        "The building is overlook a lake.",
+        "The building have overlooked a lake.",
+        "The building overlook a lake.",
+        "The building overlooking a lake."
+      ],
+      "answer": 0
+    },
+    {
+      "topic": "description",
+      "id": 83,
+      "q": "Which noun phrase has the most natural adjective order?",
+      "options": [
+        "a wooden beautiful old bridge",
+        "an old beautiful wooden bridge",
+        "an old wooden beautiful bridge",
+        "a wooden old beautiful bridge",
+        "a beautiful old wooden bridge"
+      ],
+      "answer": 4
+    },
+    {
+      "topic": "description",
+      "id": 84,
+      "q": "Which sentence gives the most precise spatial description?",
+      "options": [
+        "A narrow staircase beside the reception desk leads to the upper floor.",
+        "The place has many things in various areas.",
+        "The building is really nice and interesting.",
+        "People often visit the place for different reasons.",
+        "There are several features somewhere inside."
+      ],
+      "answer": 0
+    },
+    {
+      "topic": "description",
+      "id": 85,
+      "q": "Which sentence describes a place through sensory details rather than evaluation alone?",
+      "options": [
+        "Everyone should visit this amazing place.",
+        "The air smells of pine, and sunlight filters through the tall windows.",
+        "The building is superior to every other building.",
+        "I believe the location deserves more attention.",
+        "The place is definitely the best in town."
+      ],
+      "answer": 1
+    },
+    {
+      "topic": "direction",
+      "id": 86,
+      "q": "Which building is directly north of the park?",
+      "options": [
+        "The museum.",
+        "The library.",
+        "The clinic.",
+        "The cafe.",
+        "The bank."
+      ],
+      "answer": 1,
+      "passage": "Map 1 | Town center North is at the top. Each box is a building. The gaps between boxes represent streets or paths. Use the map for the next five questions.",
+      "map": [
+        "Bakery",
+        "Library",
+        "Museum",
+        "Clinic",
+        "Park",
+        "Bank",
+        "Station",
+        "Cafe",
+        "Hotel"
+      ]
+    },
+    {
+      "topic": "direction",
+      "id": 87,
+      "q": "You are at the station. Which sequence takes you to the museum along the western and northern rows?",
+      "options": [
+        "East to the cafe, then south and west.",
+        "North past the clinic to the bakery, then east past the library.",
+        "East past the cafe to the hotel, then west to the station.",
+        "North to the bakery, then west past the clinic.",
+        "North to the clinic, then south to the station and east."
+      ],
+      "answer": 1,
+      "passage": "Map 1 | Town center North is at the top. Each box is a building. The gaps between boxes represent streets or paths. Use the map for the next five questions.",
+      "map": [
+        "Bakery",
+        "Library",
+        "Museum",
+        "Clinic",
+        "Park",
+        "Bank",
+        "Station",
+        "Cafe",
+        "Hotel"
+      ]
+    },
+    {
+      "topic": "direction",
+      "id": 88,
+      "q": "Which building is directly between the clinic and the bank?",
+      "options": [
+        "The park.",
+        "The library.",
+        "The cafe.",
+        "The bakery.",
+        "The station."
+      ],
+      "answer": 0,
+      "passage": "Map 1 | Town center North is at the top. Each box is a building. The gaps between boxes represent streets or paths. Use the map for the next five questions.",
+      "map": [
+        "Bakery",
+        "Library",
+        "Museum",
+        "Clinic",
+        "Park",
+        "Bank",
+        "Station",
+        "Cafe",
+        "Hotel"
+      ]
+    },
+    {
+      "topic": "direction",
+      "id": 89,
+      "q": "You are at the hotel facing north. Which direction is the cafe?",
+      "options": [
+        "Directly north.",
+        "To your right.",
+        "Straight ahead.",
+        "To your left.",
+        "Behind you to the right."
+      ],
+      "answer": 3,
+      "passage": "Map 1 | Town center North is at the top. Each box is a building. The gaps between boxes represent streets or paths. Use the map for the next five questions.",
+      "map": [
+        "Bakery",
+        "Library",
+        "Museum",
+        "Clinic",
+        "Park",
+        "Bank",
+        "Station",
+        "Cafe",
+        "Hotel"
+      ]
+    },
+    {
+      "topic": "direction",
+      "id": 90,
+      "q": "From the library, which route reaches the hotel in two straight legs without passing the park?",
+      "options": [
+        "Go south to the park, then west.",
+        "Go east to the museum, then south past the bank.",
+        "Go east to the museum, then north.",
+        "Go south through the park, then east from the cafe.",
+        "Go west to the bakery, then north."
+      ],
+      "answer": 1,
+      "passage": "Map 1 | Town center North is at the top. Each box is a building. The gaps between boxes represent streets or paths. Use the map for the next five questions.",
+      "map": [
+        "Bakery",
+        "Library",
+        "Museum",
+        "Clinic",
+        "Park",
+        "Bank",
+        "Station",
+        "Cafe",
+        "Hotel"
+      ]
+    },
+    {
+      "topic": "direction",
+      "id": 91,
+      "q": "Which place is immediately east of the garden?",
+      "options": [
+        "The canteen.",
+        "The court.",
+        "The hall.",
+        "The library.",
+        "The office."
+      ],
+      "answer": 0,
+      "passage": "Map 2 | School campus North is at the top. Each box is a building. The gaps between boxes represent streets or paths. Use the map for the next five questions.",
+      "map": [
+        "Laboratory",
+        "Hall",
+        "Library",
+        "Office",
+        "Garden",
+        "Canteen",
+        "Gate",
+        "Court",
+        "Clinic"
+      ]
+    },
+    {
+      "topic": "direction",
+      "id": 92,
+      "q": "You are at the gate facing north. Which place is immediately ahead?",
+      "options": [
+        "The canteen.",
+        "The office.",
+        "The clinic.",
+        "The court.",
+        "The garden."
+      ],
+      "answer": 1,
+      "passage": "Map 2 | School campus North is at the top. Each box is a building. The gaps between boxes represent streets or paths. Use the map for the next five questions.",
+      "map": [
+        "Laboratory",
+        "Hall",
+        "Library",
+        "Office",
+        "Garden",
+        "Canteen",
+        "Gate",
+        "Court",
+        "Clinic"
+      ]
+    },
+    {
+      "topic": "direction",
+      "id": 93,
+      "q": "Which building lies directly south of the library?",
+      "options": [
+        "The clinic.",
+        "The garden.",
+        "The laboratory.",
+        "The canteen.",
+        "The hall."
+      ],
+      "answer": 3,
+      "passage": "Map 2 | School campus North is at the top. Each box is a building. The gaps between boxes represent streets or paths. Use the map for the next five questions.",
+      "map": [
+        "Laboratory",
+        "Hall",
+        "Library",
+        "Office",
+        "Garden",
+        "Canteen",
+        "Gate",
+        "Court",
+        "Clinic"
+      ]
+    },
+    {
+      "topic": "direction",
+      "id": 94,
+      "q": "From the court, go north to the hall, then turn left. Where do you arrive?",
+      "options": [
+        "The laboratory.",
+        "The clinic.",
+        "The office.",
+        "The canteen.",
+        "The library."
+      ],
+      "answer": 0,
+      "passage": "Map 2 | School campus North is at the top. Each box is a building. The gaps between boxes represent streets or paths. Use the map for the next five questions.",
+      "map": [
+        "Laboratory",
+        "Hall",
+        "Library",
+        "Office",
+        "Garden",
+        "Canteen",
+        "Gate",
+        "Court",
+        "Clinic"
+      ]
+    },
+    {
+      "topic": "direction",
+      "id": 95,
+      "q": "Which route from the gate to the library avoids the garden?",
+      "options": [
+        "Go north to the laboratory, then east past the hall.",
+        "Go north to the office, then east through the garden.",
+        "Go north to the office, then east to the garden and north.",
+        "Go east to the court, then north through the garden.",
+        "Go east to the court, then north to the hall."
+      ],
+      "answer": 0,
+      "passage": "Map 2 | School campus North is at the top. Each box is a building. The gaps between boxes represent streets or paths. Use the map for the next five questions.",
+      "map": [
+        "Laboratory",
+        "Hall",
+        "Library",
+        "Office",
+        "Garden",
+        "Canteen",
+        "Gate",
+        "Court",
+        "Clinic"
+      ]
+    },
+    {
+      "topic": "direction",
+      "id": 96,
+      "q": "Which location is diagonally southeast of the square?",
+      "options": [
+        "The gallery.",
+        "The pharmacy.",
+        "The inn.",
+        "The market.",
+        "The beach."
+      ],
+      "answer": 2,
+      "passage": "Map 3 | Seaside district North is at the top. Each box is a building. The gaps between boxes represent streets or paths. Use the map for the next five questions.",
+      "map": [
+        "Lighthouse",
+        "Gallery",
+        "Market",
+        "Pier",
+        "Square",
+        "Pharmacy",
+        "Beach",
+        "Bus Stop",
+        "Inn"
+      ]
+    },
+    {
+      "topic": "direction",
+      "id": 97,
+      "q": "You are at the pier facing east. Where is the lighthouse relative to you?",
+      "options": [
+        "Straight ahead.",
+        "Directly behind you.",
+        "To the southeast.",
+        "On your left.",
+        "On your right."
+      ],
+      "answer": 3,
+      "passage": "Map 3 | Seaside district North is at the top. Each box is a building. The gaps between boxes represent streets or paths. Use the map for the next five questions.",
+      "map": [
+        "Lighthouse",
+        "Gallery",
+        "Market",
+        "Pier",
+        "Square",
+        "Pharmacy",
+        "Beach",
+        "Bus Stop",
+        "Inn"
+      ]
+    },
+    {
+      "topic": "direction",
+      "id": 98,
+      "q": "What lies directly between the gallery and the bus stop?",
+      "options": [
+        "The market.",
+        "The pharmacy.",
+        "The square.",
+        "The pier.",
+        "The inn."
+      ],
+      "answer": 2,
+      "passage": "Map 3 | Seaside district North is at the top. Each box is a building. The gaps between boxes represent streets or paths. Use the map for the next five questions.",
+      "map": [
+        "Lighthouse",
+        "Gallery",
+        "Market",
+        "Pier",
+        "Square",
+        "Pharmacy",
+        "Beach",
+        "Bus Stop",
+        "Inn"
+      ]
+    },
+    {
+      "topic": "direction",
+      "id": 99,
+      "q": "From the market, go south past the pharmacy, then turn right. Which place is next?",
+      "options": [
+        "The gallery.",
+        "The pier.",
+        "The square.",
+        "The bus stop.",
+        "The beach."
+      ],
+      "answer": 3,
+      "passage": "Map 3 | Seaside district North is at the top. Each box is a building. The gaps between boxes represent streets or paths. Use the map for the next five questions.",
+      "map": [
+        "Lighthouse",
+        "Gallery",
+        "Market",
+        "Pier",
+        "Square",
+        "Pharmacy",
+        "Beach",
+        "Bus Stop",
+        "Inn"
+      ]
+    },
+    {
+      "topic": "direction",
+      "id": 100,
+      "q": "Which route gets from the beach to the gallery with only one turn?",
+      "options": [
+        "Go east to the bus stop, then north past the square.",
+        "Go north to the pier, east to the square, then north.",
+        "Go east to the inn, north to the market, then west.",
+        "Go east to the bus stop, then south.",
+        "Go north to the lighthouse, then west."
+      ],
+      "answer": 0,
+      "passage": "Map 3 | Seaside district North is at the top. Each box is a building. The gaps between boxes represent streets or paths. Use the map for the next five questions.",
+      "map": [
+        "Lighthouse",
+        "Gallery",
+        "Market",
+        "Pier",
+        "Square",
+        "Pharmacy",
+        "Beach",
+        "Bus Stop",
+        "Inn"
+      ]
+    },
+    {
+      "topic": "direction",
+      "id": 101,
+      "q": "Which expression politely asks for directions?",
+      "options": [
+        "Could you tell me how to get to the station?",
+        "Tell me where does the station located.",
+        "I think the station is quite far.",
+        "Would you like me to go to the station?",
+        "Could you tell me how do I get to the station?"
+      ],
+      "answer": 0
+    },
+    {
+      "topic": "direction",
+      "id": 102,
+      "q": "Complete: Walk ... the bridge to reach the opposite bank.",
+      "options": [
+        "alongside",
+        "across",
+        "between",
+        "underneath",
+        "toward but not across"
+      ],
+      "answer": 1
+    },
+    {
+      "topic": "direction",
+      "id": 103,
+      "q": "A guide says, “Go past the post office.” What should you do?",
+      "options": [
+        "Enter the post office.",
+        "Continue beyond the post office.",
+        "Go inside and wait there.",
+        "Stop directly in front of it.",
+        "Turn around before reaching it."
+      ],
+      "answer": 1
+    },
+    {
+      "topic": "direction",
+      "id": 104,
+      "q": "Which instruction means to reverse your direction?",
+      "options": [
+        "Cross at the intersection.",
+        "Bear slightly left.",
+        "Take the second right.",
+        "Make a U-turn.",
+        "Keep straight ahead."
+      ],
+      "answer": 3
+    },
+    {
+      "topic": "direction",
+      "id": 105,
+      "q": "Choose the grammatically correct direction.",
+      "options": [
+        "Turn left at the traffic lights.",
+        "To turn left at the traffic lights.",
+        "Turns left in the traffic lights.",
+        "Turning left at the traffic lights now.",
+        "Turn to left on the traffic lights."
+      ],
+      "answer": 0
+    },
+    {
+      "topic": "direction",
+      "id": 106,
+      "q": "“The bookstore is opposite the bakery.” What does this mean?",
+      "options": [
+        "The bookstore is directly above the bakery.",
+        "The bookstore is inside the bakery.",
+        "The bookstore shares the same entrance.",
+        "The bookstore faces the bakery from the other side.",
+        "The bookstore is behind the bakery."
+      ],
+      "answer": 3
+    },
+    {
+      "topic": "direction",
+      "id": 107,
+      "q": "A visitor needs a wheelchair-accessible route. Which reply is most useful?",
+      "options": [
+        "The building is somewhere nearby.",
+        "Just follow everyone else.",
+        "Take the shortest route, which has several steps.",
+        "Use the ramp beside the main entrance; it avoids the stairs.",
+        "Use the staircase because it is closer."
+      ],
+      "answer": 3
+    },
+    {
+      "topic": "direction",
+      "id": 108,
+      "q": "Which instruction is least ambiguous?",
+      "options": [
+        "Keep moving until you feel close enough.",
+        "Go that way until you see something familiar.",
+        "At the second intersection, turn right onto Pine Street.",
+        "Turn somewhere near the shops.",
+        "Take the road that looks correct."
+      ],
+      "answer": 2
+    },
+    {
+      "topic": "direction",
+      "id": 109,
+      "q": "“Could you repeat the last part of the directions?” What is the speaker doing?",
+      "options": [
+        "Expressing disagreement.",
+        "Offering transportation.",
+        "Requesting clarification.",
+        "Refusing an offer.",
+        "Giving a warning."
+      ],
+      "answer": 2
+    },
+    {
+      "topic": "direction",
+      "id": 110,
+      "q": "A street is closed between the bank and the station. Which response is most appropriate?",
+      "options": [
+        "Stop at the bank and assume it is the station.",
+        "Ignore the barrier because the route is short.",
+        "Take the parallel street and turn back toward the station after the closure.",
+        "Walk in the opposite direction without checking the route.",
+        "Continue directly through the closed section."
+      ],
+      "answer": 2
+    },
+    {
+      "topic": "exposition",
+      "id": 111,
+      "q": "What is the central thesis?",
+      "options": [
+        "Motivated students never experience tiredness.",
+        "Transportation is the only cause of student fatigue.",
+        "A carefully planned later start could improve students' readiness to learn.",
+        "Schools should remove all morning lessons.",
+        "Teenagers should be allowed to choose any arrival time."
+      ],
+      "answer": 2,
+      "passage": "Text 1 | A Later School Start\nSecondary schools should consider starting lessons later in the morning. A schedule that allows\nteenagers more opportunity to sleep can support attention and emotional well-being. Students who\narrive exhausted may struggle to follow explanations even when they are motivated to learn. A later\nstart could also reduce the pressure of extremely early travel. However, simply moving the timetable\nwould not help if students consistently stayed awake later at night. Schools would need to coordinate\ntransport and encourage healthy routines. A carefully planned later start is therefore a sensible option\nfor improving readiness to learn."
+    },
+    {
+      "topic": "exposition",
+      "id": 112,
+      "q": "Which assumption underlies the first argument?",
+      "options": [
+        "Changing the timetable automatically improves grades.",
+        "All students currently follow healthy routines.",
+        "Every teenager travels by public transport.",
+        "Students learn best only in the afternoon.",
+        "Additional sleep can help students concentrate."
+      ],
+      "answer": 4,
+      "passage": "Text 1 | A Later School Start\nSecondary schools should consider starting lessons later in the morning. A schedule that allows\nteenagers more opportunity to sleep can support attention and emotional well-being. Students who\narrive exhausted may struggle to follow explanations even when they are motivated to learn. A later\nstart could also reduce the pressure of extremely early travel. However, simply moving the timetable\nwould not help if students consistently stayed awake later at night. Schools would need to coordinate\ntransport and encourage healthy routines. A carefully planned later start is therefore a sensible option\nfor improving readiness to learn."
+    },
+    {
+      "topic": "exposition",
+      "id": 113,
+      "q": "Why does the author mention students staying awake later?",
+      "options": [
+        "To argue that sleep is unrelated to education.",
+        "To acknowledge a condition that could weaken the proposed benefit.",
+        "To introduce a separate topic about entertainment.",
+        "To prove that a later start is impossible.",
+        "To claim students should study all night."
+      ],
+      "answer": 1,
+      "passage": "Text 1 | A Later School Start\nSecondary schools should consider starting lessons later in the morning. A schedule that allows\nteenagers more opportunity to sleep can support attention and emotional well-being. Students who\narrive exhausted may struggle to follow explanations even when they are motivated to learn. A later\nstart could also reduce the pressure of extremely early travel. However, simply moving the timetable\nwould not help if students consistently stayed awake later at night. Schools would need to coordinate\ntransport and encourage healthy routines. A carefully planned later start is therefore a sensible option\nfor improving readiness to learn."
+    },
+    {
+      "topic": "exposition",
+      "id": 114,
+      "q": "Which evidence would best strengthen the thesis?",
+      "options": [
+        "A survey of students' favorite breakfast foods.",
+        "A comparison of sleep duration and classroom attention before and after a schedule change.",
+        "A record of the colors of school buses.",
+        "A list of school buildings with morning classes.",
+        "A photograph of an empty classroom at sunrise."
+      ],
+      "answer": 1,
+      "passage": "Text 1 | A Later School Start\nSecondary schools should consider starting lessons later in the morning. A schedule that allows\nteenagers more opportunity to sleep can support attention and emotional well-being. Students who\narrive exhausted may struggle to follow explanations even when they are motivated to learn. A later\nstart could also reduce the pressure of extremely early travel. However, simply moving the timetable\nwould not help if students consistently stayed awake later at night. Schools would need to coordinate\ntransport and encourage healthy routines. A carefully planned later start is therefore a sensible option\nfor improving readiness to learn."
+    },
+    {
+      "topic": "exposition",
+      "id": 115,
+      "q": "What is closest in meaning to “exhausted”?",
+      "options": [
+        "slightly confused",
+        "well prepared",
+        "deeply interested",
+        "extremely tired",
+        "highly motivated"
+      ],
+      "answer": 3,
+      "passage": "Text 1 | A Later School Start\nSecondary schools should consider starting lessons later in the morning. A schedule that allows\nteenagers more opportunity to sleep can support attention and emotional well-being. Students who\narrive exhausted may struggle to follow explanations even when they are motivated to learn. A later\nstart could also reduce the pressure of extremely early travel. However, simply moving the timetable\nwould not help if students consistently stayed awake later at night. Schools would need to coordinate\ntransport and encourage healthy routines. A carefully planned later start is therefore a sensible option\nfor improving readiness to learn."
+    },
+    {
+      "topic": "exposition",
+      "id": 116,
+      "q": "Which sentence functions as the reiteration?",
+      "options": [
+        "A later start could also reduce the pressure of early travel.",
+        "However, simply moving the timetable would not help if students stayed awake later.",
+        "Students who arrive exhausted may struggle to follow explanations.",
+        "Schools would need to coordinate transport.",
+        "A carefully planned later start is therefore a sensible option for improving readiness to learn."
+      ],
+      "answer": 4,
+      "passage": "Text 1 | A Later School Start\nSecondary schools should consider starting lessons later in the morning. A schedule that allows\nteenagers more opportunity to sleep can support attention and emotional well-being. Students who\narrive exhausted may struggle to follow explanations even when they are motivated to learn. A later\nstart could also reduce the pressure of extremely early travel. However, simply moving the timetable\nwould not help if students consistently stayed awake later at night. Schools would need to coordinate\ntransport and encourage healthy routines. A carefully planned later start is therefore a sensible option\nfor improving readiness to learn."
+    },
+    {
+      "topic": "exposition",
+      "id": 117,
+      "q": "The author's position is best described as ...",
+      "options": [
+        "neutral about whether sleep matters.",
+        "concerned only with transportation.",
+        "completely opposed to any change.",
+        "supportive but aware of practical limitations.",
+        "supportive regardless of possible consequences."
+      ],
+      "answer": 3,
+      "passage": "Text 1 | A Later School Start\nSecondary schools should consider starting lessons later in the morning. A schedule that allows\nteenagers more opportunity to sleep can support attention and emotional well-being. Students who\narrive exhausted may struggle to follow explanations even when they are motivated to learn. A later\nstart could also reduce the pressure of extremely early travel. However, simply moving the timetable\nwould not help if students consistently stayed awake later at night. Schools would need to coordinate\ntransport and encourage healthy routines. A carefully planned later start is therefore a sensible option\nfor improving readiness to learn."
+    },
+    {
+      "topic": "exposition",
+      "id": 118,
+      "q": "Which finding would most directly weaken the expected benefit?",
+      "options": [
+        "The timetable was printed in a different format.",
+        "Teachers preferred the new staff uniforms.",
+        "Some students moved closer to school.",
+        "Students obtained no additional sleep and showed no improvement in attention after the change.",
+        "The school changed its lunch menu."
+      ],
+      "answer": 3,
+      "passage": "Text 1 | A Later School Start\nSecondary schools should consider starting lessons later in the morning. A schedule that allows\nteenagers more opportunity to sleep can support attention and emotional well-being. Students who\narrive exhausted may struggle to follow explanations even when they are motivated to learn. A later\nstart could also reduce the pressure of extremely early travel. However, simply moving the timetable\nwould not help if students consistently stayed awake later at night. Schools would need to coordinate\ntransport and encourage healthy routines. A carefully planned later start is therefore a sensible option\nfor improving readiness to learn."
+    },
+    {
+      "topic": "exposition",
+      "id": 119,
+      "q": "What is the author's main claim?",
+      "options": [
+        "Every damaged item must be repaired at home.",
+        "Safe and reasonable repair deserves greater consideration.",
+        "Electrical products should never be used.",
+        "New products are always more expensive than old ones.",
+        "Local repair shops should replace all manufacturers."
+      ],
+      "answer": 1,
+      "passage": "Text 2 | Repair Before Replacement\nRepairing everyday products deserves greater attention in a society accustomed to replacing them.\nWhen a broken item can be restored safely, repairing it may reduce waste and extend its useful life. It\ncan also cost less than purchasing a new product, especially when replacement parts are affordable.\nFurthermore, local repair services can develop practical skills and support neighborhood businesses.\nNot every product should be repaired: a damaged electrical device may require professional\nassessment, and some items are beyond recovery. Nevertheless, choosing repair whenever it is safe\nand reasonable remains a valuable habit."
+    },
+    {
+      "topic": "exposition",
+      "id": 120,
+      "q": "Which argument concerns the environment most directly?",
+      "options": [
+        "Electrical devices require assessment.",
+        "Repairing items may reduce waste.",
+        "Repair businesses employ skilled workers.",
+        "Replacement parts may be affordable.",
+        "Some repairs may not be practical."
+      ],
+      "answer": 1,
+      "passage": "Text 2 | Repair Before Replacement\nRepairing everyday products deserves greater attention in a society accustomed to replacing them.\nWhen a broken item can be restored safely, repairing it may reduce waste and extend its useful life. It\ncan also cost less than purchasing a new product, especially when replacement parts are affordable.\nFurthermore, local repair services can develop practical skills and support neighborhood businesses.\nNot every product should be repaired: a damaged electrical device may require professional\nassessment, and some items are beyond recovery. Nevertheless, choosing repair whenever it is safe\nand reasonable remains a valuable habit."
+    },
+    {
+      "topic": "exposition",
+      "id": 121,
+      "q": "The word “restored” is closest in meaning to ...",
+      "options": [
+        "examined without improvement.",
+        "returned to a usable condition.",
+        "made more expensive.",
+        "replaced with an unrelated object.",
+        "discarded permanently."
+      ],
+      "answer": 1,
+      "passage": "Text 2 | Repair Before Replacement\nRepairing everyday products deserves greater attention in a society accustomed to replacing them.\nWhen a broken item can be restored safely, repairing it may reduce waste and extend its useful life. It\ncan also cost less than purchasing a new product, especially when replacement parts are affordable.\nFurthermore, local repair services can develop practical skills and support neighborhood businesses.\nNot every product should be repaired: a damaged electrical device may require professional\nassessment, and some items are beyond recovery. Nevertheless, choosing repair whenever it is safe\nand reasonable remains a valuable habit."
+    },
+    {
+      "topic": "exposition",
+      "id": 122,
+      "q": "Which example illustrates the economic argument?",
+      "options": [
+        "A family throws away a working fan.",
+        "A customer buys a product solely for its color.",
+        "A shop displays new products in its window.",
+        "A student replaces a bicycle tire for less than the cost of a new bicycle.",
+        "A technician refuses to assess a damaged cable."
+      ],
+      "answer": 3,
+      "passage": "Text 2 | Repair Before Replacement\nRepairing everyday products deserves greater attention in a society accustomed to replacing them.\nWhen a broken item can be restored safely, repairing it may reduce waste and extend its useful life. It\ncan also cost less than purchasing a new product, especially when replacement parts are affordable.\nFurthermore, local repair services can develop practical skills and support neighborhood businesses.\nNot every product should be repaired: a damaged electrical device may require professional\nassessment, and some items are beyond recovery. Nevertheless, choosing repair whenever it is safe\nand reasonable remains a valuable habit."
+    },
+    {
+      "topic": "exposition",
+      "id": 123,
+      "q": "Why does the writer mention electrical devices?",
+      "options": [
+        "To establish a safety-related limit to the argument.",
+        "To suggest that electrical waste is harmless.",
+        "To shift the thesis toward buying new devices.",
+        "To reject professional repair services.",
+        "To prove all repairs require identical skills."
+      ],
+      "answer": 0,
+      "passage": "Text 2 | Repair Before Replacement\nRepairing everyday products deserves greater attention in a society accustomed to replacing them.\nWhen a broken item can be restored safely, repairing it may reduce waste and extend its useful life. It\ncan also cost less than purchasing a new product, especially when replacement parts are affordable.\nFurthermore, local repair services can develop practical skills and support neighborhood businesses.\nNot every product should be repaired: a damaged electrical device may require professional\nassessment, and some items are beyond recovery. Nevertheless, choosing repair whenever it is safe\nand reasonable remains a valuable habit."
+    },
+    {
+      "topic": "exposition",
+      "id": 124,
+      "q": "What is the function of “Furthermore”?",
+      "options": [
+        "To show an earlier event.",
+        "To signal a contradiction.",
+        "To introduce an additional supporting argument.",
+        "To provide the final conclusion.",
+        "To indicate an exception."
+      ],
+      "answer": 2,
+      "passage": "Text 2 | Repair Before Replacement\nRepairing everyday products deserves greater attention in a society accustomed to replacing them.\nWhen a broken item can be restored safely, repairing it may reduce waste and extend its useful life. It\ncan also cost less than purchasing a new product, especially when replacement parts are affordable.\nFurthermore, local repair services can develop practical skills and support neighborhood businesses.\nNot every product should be repaired: a damaged electrical device may require professional\nassessment, and some items are beyond recovery. Nevertheless, choosing repair whenever it is safe\nand reasonable remains a valuable habit."
+    },
+    {
+      "topic": "exposition",
+      "id": 125,
+      "q": "Which statement would overstate the author's position?",
+      "options": [
+        "Repair can help reduce waste.",
+        "Repairing is always preferable regardless of safety or cost.",
+        "Some products can be restored safely.",
+        "Repairing can support local businesses.",
+        "Replacement may sometimes be necessary."
+      ],
+      "answer": 1,
+      "passage": "Text 2 | Repair Before Replacement\nRepairing everyday products deserves greater attention in a society accustomed to replacing them.\nWhen a broken item can be restored safely, repairing it may reduce waste and extend its useful life. It\ncan also cost less than purchasing a new product, especially when replacement parts are affordable.\nFurthermore, local repair services can develop practical skills and support neighborhood businesses.\nNot every product should be repaired: a damaged electrical device may require professional\nassessment, and some items are beyond recovery. Nevertheless, choosing repair whenever it is safe\nand reasonable remains a valuable habit."
+    },
+    {
+      "topic": "exposition",
+      "id": 126,
+      "q": "Which evidence best supports the environmental claim?",
+      "options": [
+        "Records showing fewer discarded items after a community repair program.",
+        "A list of popular shopping websites.",
+        "The opening hours of a repair shop.",
+        "A poll on preferred product colors.",
+        "The price of a newly released phone."
+      ],
+      "answer": 0,
+      "passage": "Text 2 | Repair Before Replacement\nRepairing everyday products deserves greater attention in a society accustomed to replacing them.\nWhen a broken item can be restored safely, repairing it may reduce waste and extend its useful life. It\ncan also cost less than purchasing a new product, especially when replacement parts are affordable.\nFurthermore, local repair services can develop practical skills and support neighborhood businesses.\nNot every product should be repaired: a damaged electrical device may require professional\nassessment, and some items are beyond recovery. Nevertheless, choosing repair whenever it is safe\nand reasonable remains a valuable habit."
+    },
+    {
+      "topic": "exposition",
+      "id": 127,
+      "q": "Which statement expresses the thesis?",
+      "options": [
+        "Students should replace lessons with gardening.",
+        "School gardens can serve as useful learning environments.",
+        "Maintaining plants is always effortless.",
+        "School gardens should occupy every available space.",
+        "Decorative plants are more important than academic subjects."
+      ],
+      "answer": 1,
+      "passage": "Text 3 | School Gardens\nSchool gardens are more than decorative spaces; they can be useful learning environments. By\nobserving plants over time, students connect scientific concepts with visible changes. Measuring\ngrowth and recording conditions also provide opportunities to practice data collection. In addition,\nmaintaining a garden requires shared responsibilities, which can develop cooperation. Critics may\nargue that gardens occupy space and require maintenance. This concern is reasonable, but a small\ngarden with a clear care schedule can limit these demands. Therefore, a manageable school garden\ncan enrich learning without becoming an excessive burden."
+    },
+    {
+      "topic": "exposition",
+      "id": 128,
+      "q": "Which activity best illustrates the first supporting argument?",
+      "options": [
+        "Buying flowers for a celebration.",
+        "Painting a garden fence without discussing plants.",
+        "Choosing a decorative uniform.",
+        "Observing seed germination while studying plant development.",
+        "Moving desks away from a window."
+      ],
+      "answer": 3,
+      "passage": "Text 3 | School Gardens\nSchool gardens are more than decorative spaces; they can be useful learning environments. By\nobserving plants over time, students connect scientific concepts with visible changes. Measuring\ngrowth and recording conditions also provide opportunities to practice data collection. In addition,\nmaintaining a garden requires shared responsibilities, which can develop cooperation. Critics may\nargue that gardens occupy space and require maintenance. This concern is reasonable, but a small\ngarden with a clear care schedule can limit these demands. Therefore, a manageable school garden\ncan enrich learning without becoming an excessive burden."
+    },
+    {
+      "topic": "exposition",
+      "id": 129,
+      "q": "Which benefit is linked to shared responsibilities?",
+      "options": [
+        "Larger school buildings.",
+        "Less scientific observation.",
+        "Reduced sunlight.",
+        "Higher plant prices.",
+        "Improved cooperation."
+      ],
+      "answer": 4,
+      "passage": "Text 3 | School Gardens\nSchool gardens are more than decorative spaces; they can be useful learning environments. By\nobserving plants over time, students connect scientific concepts with visible changes. Measuring\ngrowth and recording conditions also provide opportunities to practice data collection. In addition,\nmaintaining a garden requires shared responsibilities, which can develop cooperation. Critics may\nargue that gardens occupy space and require maintenance. This concern is reasonable, but a small\ngarden with a clear care schedule can limit these demands. Therefore, a manageable school garden\ncan enrich learning without becoming an excessive burden."
+    },
+    {
+      "topic": "exposition",
+      "id": 130,
+      "q": "What is the writer's response to the maintenance objection?",
+      "options": [
+        "A smaller garden and an organized care schedule can reduce the burden.",
+        "Schools should hire unlimited staff.",
+        "Maintenance concerns should be ignored completely.",
+        "All school facilities should be replaced with gardens.",
+        "Gardens require no regular care."
+      ],
+      "answer": 0,
+      "passage": "Text 3 | School Gardens\nSchool gardens are more than decorative spaces; they can be useful learning environments. By\nobserving plants over time, students connect scientific concepts with visible changes. Measuring\ngrowth and recording conditions also provide opportunities to practice data collection. In addition,\nmaintaining a garden requires shared responsibilities, which can develop cooperation. Critics may\nargue that gardens occupy space and require maintenance. This concern is reasonable, but a small\ngarden with a clear care schedule can limit these demands. Therefore, a manageable school garden\ncan enrich learning without becoming an excessive burden."
+    },
+    {
+      "topic": "exposition",
+      "id": 131,
+      "q": "What is opposite in meaning to “manageable”?",
+      "options": [
+        "organized",
+        "limited",
+        "uncontrollable",
+        "reasonable",
+        "practical"
+      ],
+      "answer": 2,
+      "passage": "Text 3 | School Gardens\nSchool gardens are more than decorative spaces; they can be useful learning environments. By\nobserving plants over time, students connect scientific concepts with visible changes. Measuring\ngrowth and recording conditions also provide opportunities to practice data collection. In addition,\nmaintaining a garden requires shared responsibilities, which can develop cooperation. Critics may\nargue that gardens occupy space and require maintenance. This concern is reasonable, but a small\ngarden with a clear care schedule can limit these demands. Therefore, a manageable school garden\ncan enrich learning without becoming an excessive burden."
+    },
+    {
+      "topic": "exposition",
+      "id": 132,
+      "q": "Which evidence would best support the learning claim?",
+      "options": [
+        "A count of decorative pots purchased.",
+        "Student work showing improved understanding of plant growth after garden activities.",
+        "A photograph of a school uniform.",
+        "A survey about favorite flower colors only.",
+        "A list of nearby restaurants."
+      ],
+      "answer": 1,
+      "passage": "Text 3 | School Gardens\nSchool gardens are more than decorative spaces; they can be useful learning environments. By\nobserving plants over time, students connect scientific concepts with visible changes. Measuring\ngrowth and recording conditions also provide opportunities to practice data collection. In addition,\nmaintaining a garden requires shared responsibilities, which can develop cooperation. Critics may\nargue that gardens occupy space and require maintenance. This concern is reasonable, but a small\ngarden with a clear care schedule can limit these demands. Therefore, a manageable school garden\ncan enrich learning without becoming an excessive burden."
+    },
+    {
+      "topic": "exposition",
+      "id": 133,
+      "q": "What does “these demands” refer to?",
+      "options": [
+        "Students' test scores and grades.",
+        "Scientific concepts and visible changes.",
+        "The decorations in classrooms.",
+        "The space and maintenance required by gardens.",
+        "The plants' colors and shapes."
+      ],
+      "answer": 3,
+      "passage": "Text 3 | School Gardens\nSchool gardens are more than decorative spaces; they can be useful learning environments. By\nobserving plants over time, students connect scientific concepts with visible changes. Measuring\ngrowth and recording conditions also provide opportunities to practice data collection. In addition,\nmaintaining a garden requires shared responsibilities, which can develop cooperation. Critics may\nargue that gardens occupy space and require maintenance. This concern is reasonable, but a small\ngarden with a clear care schedule can limit these demands. Therefore, a manageable school garden\ncan enrich learning without becoming an excessive burden."
+    },
+    {
+      "topic": "exposition",
+      "id": 134,
+      "q": "Which title best captures the writer's argument?",
+      "options": [
+        "The Most Expensive Garden Tools",
+        "How to Design a Perfect Flower Arrangement",
+        "School Gardens as Practical Learning Spaces",
+        "The History of School Buildings",
+        "Why Scientific Data Should Be Avoided"
+      ],
+      "answer": 2,
+      "passage": "Text 3 | School Gardens\nSchool gardens are more than decorative spaces; they can be useful learning environments. By\nobserving plants over time, students connect scientific concepts with visible changes. Measuring\ngrowth and recording conditions also provide opportunities to practice data collection. In addition,\nmaintaining a garden requires shared responsibilities, which can develop cooperation. Critics may\nargue that gardens occupy space and require maintenance. This concern is reasonable, but a small\ngarden with a clear care schedule can limit these demands. Therefore, a manageable school garden\ncan enrich learning without becoming an excessive burden."
+    },
+    {
+      "topic": "exposition",
+      "id": 135,
+      "q": "What is the main purpose of the text?",
+      "options": [
+        "To persuade readers to avoid all digital communication.",
+        "To describe the history of social media platforms.",
+        "To explain how to create emotional headlines.",
+        "To argue that online information should be verified before sharing.",
+        "To teach readers how to publish old articles."
+      ],
+      "answer": 3,
+      "passage": "Text 4 | Checking Information Online\nChecking information before sharing it online is an essential habit. A misleading post can spread\nquickly because readers often respond to an emotional headline before examining its evidence.\nComparing a claim with independent, reliable sources can reveal missing context or factual errors.\nChecking the publication date is equally important, since accurate information from years ago may no\nlonger describe current conditions. Verification takes time, but correcting a widely shared false claim\ncan require even greater effort. For these reasons, careful checking is a necessary part of responsible\nonline communication."
+    },
+    {
+      "topic": "exposition",
+      "id": 136,
+      "q": "Why are emotional headlines relevant to the argument?",
+      "options": [
+        "They make publication dates unnecessary.",
+        "They always contain deliberate lies.",
+        "They prevent readers from responding to posts.",
+        "They guarantee the information is accurate.",
+        "They may encourage sharing before evidence is examined."
+      ],
+      "answer": 4,
+      "passage": "Text 4 | Checking Information Online\nChecking information before sharing it online is an essential habit. A misleading post can spread\nquickly because readers often respond to an emotional headline before examining its evidence.\nComparing a claim with independent, reliable sources can reveal missing context or factual errors.\nChecking the publication date is equally important, since accurate information from years ago may no\nlonger describe current conditions. Verification takes time, but correcting a widely shared false claim\ncan require even greater effort. For these reasons, careful checking is a necessary part of responsible\nonline communication."
+    },
+    {
+      "topic": "exposition",
+      "id": 137,
+      "q": "Which action best applies the author's second argument?",
+      "options": [
+        "Sharing a post because friends have liked it.",
+        "Comparing a claim with reports from independent credible sources.",
+        "Checking the number of emojis in a post.",
+        "Ignoring evidence that challenges a claim.",
+        "Reading only the headline of a popular account."
+      ],
+      "answer": 1,
+      "passage": "Text 4 | Checking Information Online\nChecking information before sharing it online is an essential habit. A misleading post can spread\nquickly because readers often respond to an emotional headline before examining its evidence.\nComparing a claim with independent, reliable sources can reveal missing context or factual errors.\nChecking the publication date is equally important, since accurate information from years ago may no\nlonger describe current conditions. Verification takes time, but correcting a widely shared false claim\ncan require even greater effort. For these reasons, careful checking is a necessary part of responsible\nonline communication."
+    },
+    {
+      "topic": "exposition",
+      "id": 138,
+      "q": "Why is the publication date important?",
+      "options": [
+        "Older reports are always false.",
+        "New reports are always reliable.",
+        "Previously accurate information may no longer apply.",
+        "Recent posts never require verification.",
+        "Dates reveal the writer's personal opinion."
+      ],
+      "answer": 2,
+      "passage": "Text 4 | Checking Information Online\nChecking information before sharing it online is an essential habit. A misleading post can spread\nquickly because readers often respond to an emotional headline before examining its evidence.\nComparing a claim with independent, reliable sources can reveal missing context or factual errors.\nChecking the publication date is equally important, since accurate information from years ago may no\nlonger describe current conditions. Verification takes time, but correcting a widely shared false claim\ncan require even greater effort. For these reasons, careful checking is a necessary part of responsible\nonline communication."
+    },
+    {
+      "topic": "exposition",
+      "id": 139,
+      "q": "The word “misleading” is closest in meaning to ...",
+      "options": [
+        "likely to create a false impression.",
+        "highly detailed.",
+        "easy to understand.",
+        "carefully verified.",
+        "completely irrelevant."
+      ],
+      "answer": 0,
+      "passage": "Text 4 | Checking Information Online\nChecking information before sharing it online is an essential habit. A misleading post can spread\nquickly because readers often respond to an emotional headline before examining its evidence.\nComparing a claim with independent, reliable sources can reveal missing context or factual errors.\nChecking the publication date is equally important, since accurate information from years ago may no\nlonger describe current conditions. Verification takes time, but correcting a widely shared false claim\ncan require even greater effort. For these reasons, careful checking is a necessary part of responsible\nonline communication."
+    },
+    {
+      "topic": "exposition",
+      "id": 140,
+      "q": "Which sentence expresses a cause-and-effect relationship?",
+      "options": [
+        "Verification takes time.",
+        "Careful checking is a necessary part of responsible communication.",
+        "A misleading post can spread quickly because readers often respond to an emotional headline.",
+        "Checking the publication date is equally important.",
+        "Comparing claims can reveal missing context."
+      ],
+      "answer": 2,
+      "passage": "Text 4 | Checking Information Online\nChecking information before sharing it online is an essential habit. A misleading post can spread\nquickly because readers often respond to an emotional headline before examining its evidence.\nComparing a claim with independent, reliable sources can reveal missing context or factual errors.\nChecking the publication date is equally important, since accurate information from years ago may no\nlonger describe current conditions. Verification takes time, but correcting a widely shared false claim\ncan require even greater effort. For these reasons, careful checking is a necessary part of responsible\nonline communication."
+    },
+    {
+      "topic": "exposition",
+      "id": 141,
+      "q": "Which finding would most strongly support the author's position?",
+      "options": [
+        "Older phones have smaller screens.",
+        "Many platforms offer dark mode.",
+        "Some readers enjoy short videos.",
+        "Users who check claims before sharing transmit fewer false reports.",
+        "Users prefer colorful photographs to plain backgrounds."
+      ],
+      "answer": 3,
+      "passage": "Text 4 | Checking Information Online\nChecking information before sharing it online is an essential habit. A misleading post can spread\nquickly because readers often respond to an emotional headline before examining its evidence.\nComparing a claim with independent, reliable sources can reveal missing context or factual errors.\nChecking the publication date is equally important, since accurate information from years ago may no\nlonger describe current conditions. Verification takes time, but correcting a widely shared false claim\ncan require even greater effort. For these reasons, careful checking is a necessary part of responsible\nonline communication."
+    },
+    {
+      "topic": "exposition",
+      "id": 142,
+      "q": "Which conclusion is consistent with the text?",
+      "options": [
+        "The newest source is necessarily the most accurate.",
+        "The effort required for verification is justified by the harm it can prevent.",
+        "Only professional journalists can verify information.",
+        "Information should be shared before anyone checks it.",
+        "All emotional headlines should be banned."
+      ],
+      "answer": 1,
+      "passage": "Text 4 | Checking Information Online\nChecking information before sharing it online is an essential habit. A misleading post can spread\nquickly because readers often respond to an emotional headline before examining its evidence.\nComparing a claim with independent, reliable sources can reveal missing context or factual errors.\nChecking the publication date is equally important, since accurate information from years ago may no\nlonger describe current conditions. Verification takes time, but correcting a widely shared false claim\ncan require even greater effort. For these reasons, careful checking is a necessary part of responsible\nonline communication."
+    },
+    {
+      "topic": "exposition",
+      "id": 143,
+      "q": "What is the conventional generic structure of an analytical exposition?",
+      "options": [
+        "Orientation - complication - resolution.",
+        "Goal - materials - steps.",
+        "General statement - chronological explanation.",
+        "Identification - description.",
+        "Thesis - arguments - reiteration."
+      ],
+      "answer": 4
+    },
+    {
+      "topic": "exposition",
+      "id": 144,
+      "q": "Which sentence is most suitable as an analytical exposition thesis?",
+      "options": [
+        "My bottle is blue and has a silver lid.",
+        "Using refillable bottles is a practical way to reduce single-use plastic waste.",
+        "First, remove the bottle cap.",
+        "The bottle was lying beside a notebook.",
+        "Yesterday I bought a bottle at the market."
+      ],
+      "answer": 1
+    },
+    {
+      "topic": "exposition",
+      "id": 145,
+      "q": "Which connector introduces a contrasting argument?",
+      "options": [
+        "Furthermore",
+        "Nevertheless",
+        "Similarly",
+        "In addition",
+        "Moreover"
+      ],
+      "answer": 1
+    },
+    {
+      "topic": "exposition",
+      "id": 146,
+      "q": "Which sentence uses a mental verb to express a viewpoint?",
+      "options": [
+        "The bell rings at seven.",
+        "Students carry their books to class.",
+        "The teacher opened the window.",
+        "Many educators believe that feedback supports learning.",
+        "The school has three floors."
+      ],
+      "answer": 3
+    },
+    {
+      "topic": "exposition",
+      "id": 147,
+      "q": "Which sentence uses the simple present tense correctly?",
+      "options": [
+        "Regular feedback is help students identify weaknesses.",
+        "Regular feedback helps students identify weaknesses.",
+        "Regular feedback helping students identify weaknesses.",
+        "Regular feedback help students identifies weaknesses.",
+        "Regular feedback have helped students identifies weaknesses."
+      ],
+      "answer": 1
+    },
+    {
+      "topic": "exposition",
+      "id": 148,
+      "q": "Which revision makes the claim less absolute and more defensible?",
+      "options": [
+        "No student can learn without group discussion.",
+        "Group discussions eliminate all academic problems.",
+        "Every student learns only through group discussion.",
+        "Group discussions can improve understanding when students participate actively.",
+        "Group discussions always guarantee perfect understanding."
+      ],
+      "answer": 3
+    },
+    {
+      "topic": "exposition",
+      "id": 149,
+      "q": "Which statement is a reiteration rather than a new supporting argument?",
+      "options": [
+        "Reading introduces students to unfamiliar vocabulary.",
+        "Reading can expose students to different perspectives.",
+        "Reading provides opportunities to explore new ideas.",
+        "Reading may improve familiarity with sentence structures.",
+        "For these reasons, regular reading is a valuable habit for students."
+      ],
+      "answer": 4
+    },
+    {
+      "topic": "exposition",
+      "id": 150,
+      "q": "A writer argues that schools benefit from recycling programs. Which information is least relevant?",
+      "options": [
+        "The availability of local recycling services.",
+        "The favorite television shows of the school staff.",
+        "The level of student participation.",
+        "The cost of recycling bins.",
+        "The amount of waste diverted from disposal."
+      ],
+      "answer": 1
+    }
+  ]
+}
