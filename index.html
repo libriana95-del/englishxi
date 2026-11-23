@@ -483,7 +483,7 @@ body{background:radial-gradient(ellipse at 85% 4%,#ffda66 0 5%,transparent 5.2%)
     </div>
 
     <script>
-        let initializeApp,getAuth,signInAnonymously,signInWithCustomToken,getFirestore,doc,setDoc,onSnapshot,collection,getDoc,runTransaction;
+        let initializeApp,getAuth,signInAnonymously,signInWithCustomToken,getFirestore,doc,setDoc,onSnapshot,collection,getDoc,runTransaction,query,where;
         // ==========================================
         // 0. FIREBASE & LOCAL MULTIPLAYER SETUP
         // ==========================================
@@ -508,7 +508,7 @@ body{background:radial-gradient(ellipse at 85% 4%,#ffda66 0 5%,transparent 5.2%)
             try {
                 ({initializeApp}=await import('https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js'));
                 ({getAuth,signInAnonymously,signInWithCustomToken}=await import('https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js'));
-                ({getFirestore,doc,setDoc,onSnapshot,collection,getDoc,runTransaction}=await import('https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js'));
+                ({getFirestore,doc,setDoc,onSnapshot,collection,getDoc,runTransaction,query,where}=await import('https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js'));
                 app = initializeApp(firebaseConfig);
                 auth = getAuth(app);
                 db = getFirestore(app);
@@ -880,6 +880,7 @@ window.joinMultiplayerRoom = async function() {
             }
 
             watchClassSession();
+            subscribePvpInbox(currentRoomCode,myUid);
             document.getElementById('lobby-modal').classList.add('hidden');
             document.getElementById('room-badge-box').classList.remove('hidden');
             document.getElementById('active-room-code').textContent = currentRoomCode;
@@ -887,22 +888,12 @@ window.joinMultiplayerRoom = async function() {
             startSeaEvents();
         };
 
-        async function syncPlayerUpdate(targetUid, partialData) { if(classBlocked()||!firestoreEnabled||targetUid!==myUid){showToast('Action unavailable during connection test','warning');return;}
-            if (!roomPlayers[targetUid]) return;
-            roomPlayers[targetUid] = { ...roomPlayers[targetUid], ...partialData };
-            broadcastLocalState(partialData.lastEvent || null);
-            updateAllUI();
-
-            if (db && firestoreEnabled && currentRoomCode) {
-                try {
-                    const ref = doc(db, 'artifacts', appId, 'public', 'data', `room_${currentRoomCode}`, targetUid);
-                    await setDoc(ref, partialData, { merge: true });
-                } catch (err) {
-                    firestoreEnabled = false;
-                }
-            }
-        }
-
+        async function syncPlayerUpdate(targetUid,partialData){
+ if(classBlocked()||!firestoreEnabled||targetUid!==myUid||!db||!roomPlayers[targetUid]){showToast('Action unavailable: connection or classroom status','warning');return false}
+ const before=roomPlayers[targetUid];roomPlayers[targetUid]={...before,...partialData};updateAllUI();
+ try{await setDoc(pvpPlayerRef(currentRoomCode,targetUid),partialData,{merge:true});broadcastLocalState(partialData.lastEvent||null);return true;}
+ catch(e){roomPlayers[targetUid]=before;updateAllUI();console.warn('Player sync',e);showToast('Save failed: '+(e.code||e.message),'error');return false;}
+}
         // ==========================================
         // 4. UI RENDERING & HUD UPDATES
         // ==========================================
@@ -1301,25 +1292,95 @@ function openQuizChallenge(topic, actionType, targetUid) { if(classBlocked())ret
         }
 
         
+
+const pvpHandled=new Set();let stopPvpInbox=null;
+const pvpKinds=['hijack','steal','sabotage'];
+function pvpBoatSpecs(p){return {boatLevel:p.boatLevel||1,maxCargo:p.maxCargo||5,maxEnergy:p.maxEnergy||100,avatar:p.avatar||'⛵'}}
+function pvpUsedCargo(p){return (p.cargo||[]).reduce((n,f)=>n+(f.slots||1),0)}
+function pvpPlayerRef(room,uid){return doc(db,'artifacts',appId,'public','data','room_'+room,uid)}
+async function receivePvpRequest(room,uid,request){
+ if(!request||request.target!==uid||request.sender===uid||!pvpKinds.includes(request.kind)||!request.id||pvpHandled.has(request.id)||classBlocked())return;
+ if(!Number.isFinite(request.at)||Math.abs(Date.now()-request.at)>60000)return;
+ pvpHandled.add(request.id);
+ const responseRef=doc(db,'pvpRooms',room,'responses',request.id);
+ const victimRef=pvpPlayerRef(room,uid),attackerRef=pvpPlayerRef(room,request.sender);
+ let payload={},error='',victimLog='';
+ try{
+  if((await getDoc(responseRef)).exists())return;
+  await runTransaction(db,async tx=>{
+   const victimSnap=await tx.get(victimRef),attackerSnap=await tx.get(attackerRef);
+   if(!victimSnap.exists()||!attackerSnap.exists())throw Error('Player unavailable');
+   if(classBlocked())throw Error('Classroom paused or ended');
+   const victim=victimSnap.data(),attacker=attackerSnap.data(),now=Date.now();
+   if((victim.guardUntil||0)>now)throw Error('Ship protected by guard');
+   let patch={},result={};
+   if(request.kind==='steal'){
+    const cargo=[...(victim.cargo||[])],fish=cargo.pop();
+    if(!fish)throw Error('Target has no fish');
+    if(pvpUsedCargo(attacker)+(fish.slots||1)>(attacker.maxCargo||5))throw Error('Attacker cargo is full');
+    patch.cargo=cargo;result.fish=fish;
+   }else if(request.kind==='sabotage'){patch.energy=Math.max(0,(victim.energy||0)-30);}
+   else if(request.kind==='hijack'){
+    if(pvpUsedCargo(attacker)>(victim.maxCargo||5)||pvpUsedCargo(victim)>(attacker.maxCargo||5))throw Error('Sell fish before swapping ship');
+    result.specs=pvpBoatSpecs(victim);result.victimName=victim.name||'captain';
+    patch={...pvpBoatSpecs(attacker),energy:Math.min(attacker.maxEnergy||100,victim.energy||0),hijackedFrom:null};
+   }
+   const verbs={hijack:' membajak kapal ',steal:' mencuri ikan dari kapal ',sabotage:' menyabotase kapal '};
+   const icons={hijack:'⚔️ ',steal:'🏴‍☠️ ',sabotage:'💣 '};
+   victimLog=icons[request.kind]+(attacker.name||'Captain')+verbs[request.kind]+(victim.name||'Captain');
+   tx.update(victimRef,{...patch,updatedAt:now,lastEvent:victimLog,pvpBy:request.sender,pvpAt:now,pvpKind:request.kind});
+   payload=result;
+  });
+ }catch(e){error=e.message||e.code||'PvP rejected'}
+ try{
+  await setDoc(responseRef,{id:request.id,kind:request.kind,sender:request.sender,target:uid,ok:!error,error,...payload,at:Date.now()});
+  if(!error&&victimLog)attackAlert(victimLog);
+ }catch(e){console.warn('PvP response',e);showToast('PvP response denied: '+(e.code||e.message),'warning')}
+}
+function subscribePvpInbox(room,uid){
+ if(stopPvpInbox){stopPvpInbox();stopPvpInbox=null}
+ if(!db||!uid)return;
+ const requests=query(collection(db,'pvpRooms',room,'requests'),where('target','==',uid));
+ stopPvpInbox=onSnapshot(requests,snapshot=>{
+  for(const c of snapshot.docChanges())if(c.type==='added')receivePvpRequest(room,uid,c.doc.data()).catch(e=>console.warn('PvP receive',e));
+ },e=>{console.warn('PvP mailbox permission',e);showToast('PvP unavailable: update Firestore Rules','error')});
+}
 async function performPvp(kind,target){
- if(!['hijack','steal','sabotage'].includes(kind)||classBlocked()||!firestoreEnabled||target===myUid)throw Error('Unavailable');
- const base=['artifacts',appId,'public','data','room_'+currentRoomCode];
- const ar=doc(db,...base,myUid),br=doc(db,...base,target);
- await runTransaction(db,async tx=>{
- const as=await tx.get(ar),bs=await tx.get(br);if(!as.exists()||!bs.exists())throw Error('Player unavailable');
- const a=as.data(),b=bs.data(),now=Date.now(),cargo=x=>[...(x.cargo||[])],used=x=>x.reduce((n,f)=>n+(f.slots||1),0);
- if((b.guardUntil||0)>now)throw Error('Ship protected by guard');
- let ap={},bp={};
- if(kind==='steal'){const bc=cargo(b),ac=cargo(a),fish=bc.pop();if(!fish||used(ac)+fish.slots>a.maxCargo)throw Error('No fish or cargo full');ap.cargo=[...ac,fish];bp.cargo=bc}
- if(kind==='sabotage')bp.energy=Math.max(0,b.energy-30);
- if(kind==='hijack'){const specs=x=>({boatLevel:x.boatLevel,maxCargo:x.maxCargo,maxEnergy:x.maxEnergy,avatar:x.avatar});if(used(cargo(a))>b.maxCargo||used(cargo(b))>a.maxCargo)throw Error('Sell cargo before swapping ships');ap={...specs(b),energy:Math.min(b.maxEnergy,a.energy),hijackedFrom:b.name};bp={...specs(a),energy:Math.min(a.maxEnergy,b.energy),hijackedFrom:null}}
- const log=({'hijack':'⚔️ '+a.name+' membajak kapal '+b.name,'steal':'🏴‍☠️ '+a.name+' mencuri ikan dari kapal '+b.name,'sabotage':'💣 '+a.name+' menyabotase kapal '+b.name})[kind];
- tx.update(ar,{...ap,updatedAt:now,pvpAt:now,pvpTarget:target,pvpKind:kind});tx.update(br,{...bp,updatedAt:now,lastEvent:log,pvpBy:myUid,pvpAt:now,pvpKind:kind});
+ if(!pvpKinds.includes(kind)||classBlocked()||!firestoreEnabled||!db||!currentRoomCode||target===myUid)throw Error('PvP unavailable');
+ const id=myUid+'-'+Date.now()+'-'+Math.random().toString(36).slice(2,10),room=currentRoomCode;
+ const reqRef=doc(db,'pvpRooms',room,'requests',id),resRef=doc(db,'pvpRooms',room,'responses',id);
+ return new Promise((resolve,reject)=>{
+  let done=false,unsubscribe=()=>{},timer=null;
+  const finish=error=>{if(done)return;done=true;clearTimeout(timer);unsubscribe();error?reject(error):resolve()};
+  timer=setTimeout(()=>finish(Error('Target offline or no response within 30 seconds')),30000);
+  unsubscribe=onSnapshot(resRef,async snap=>{
+   if(done||!snap.exists())return;
+   const response=snap.data();
+   if(response.id!==id||response.target!==target||response.sender!==myUid)return;
+   if(!response.ok)return finish(Error(response.error||'Attack rejected'));
+   try{
+    await runTransaction(db,async tx=>{
+     const ar=pvpPlayerRef(room,myUid),ownSnap=await tx.get(ar);
+     if(!ownSnap.exists())throw Error('Player not found');
+     const mine=ownSnap.data(),claimed=mine.pvpClaims||[];
+     if(claimed.includes(id))return;
+     let patch={pvpAt:Date.now(),pvpTarget:target,pvpKind:kind,updatedAt:Date.now(),pvpClaims:[...claimed.slice(-29),id]};
+     if(kind==='steal'){if(!response.fish)throw Error('No fish returned');patch.cargo=[...(mine.cargo||[]),response.fish];}
+     else if(kind==='hijack'){
+      if(!response.specs)throw Error('Missing hijack specs');
+      patch={...patch,...response.specs,energy:Math.min(response.specs.maxEnergy||100,mine.energy||0),hijackedFrom:response.victimName||'another captain'};
+     }
+     tx.update(ar,patch);
+    });
+    finish();
+   }catch(e){finish(e)}
+  },e=>finish(Error('PvP response denied: '+(e.code||e.message))));
+  setDoc(reqRef,{id,kind,sender:myUid,target,at:Date.now()}).catch(e=>finish(Error('PvP request failed: '+(e.code||e.message))));
  });
 }
-
 window.submitQuizAnswer = async function(selectedIdx) {
-            if (!activeQuiz || classBlocked()) return;
+            if (!activeQuiz || activeQuiz.submitting || classBlocked()) return;
+            activeQuiz.submitting=true;
             clearInterval(quizTimerInterval);
             document.getElementById('quiz-modal').classList.add('hidden');
 
@@ -1333,7 +1394,7 @@ window.submitQuizAnswer = async function(selectedIdx) {
             await syncPlayerUpdate(me.uid,{answerStreak:streak,bestStreak:Math.max(me.bestStreak||0,streak),...(streakCoins?{coins:me.coins+streakCoins,energy:Math.min(me.maxEnergy,me.energy+streakEnergy)}:{})});
             me=getMe();if(!me||!firestoreEnabled){activeQuiz=null;return;}
             if(streakCoins)showToast(`🔥 ${streak} correct in a row! +${streakCoins} coins${streakEnergy?' +20 energy (up to capacity)':''}`,'success');
-            if(Object.keys(QUESTION_BANK).includes(activeQuiz.topic)){const topic=activeQuiz.topic;const stats={...(me.academicTopics||{})};const t=stats[topic]||{correct:0,wrong:0};stats[topic]={correct:t.correct+(isCorrect?1:0),wrong:t.wrong+(isCorrect?0:1)};const academic={academicTopics:stats,correct:(me.correct||0)+(isCorrect?1:0),wrong:(me.wrong||0)+(isCorrect?0:1)};Object.assign(me,academic);syncPlayerUpdate(me.uid,academic);}
+            if(Object.keys(QUESTION_BANK).includes(activeQuiz.topic)){const topic=activeQuiz.topic;const stats={...(me.academicTopics||{})};const t=stats[topic]||{correct:0,wrong:0};stats[topic]={correct:t.correct+(isCorrect?1:0),wrong:t.wrong+(isCorrect?0:1)};const academic={academicTopics:stats,correct:(me.correct||0)+(isCorrect?1:0),wrong:(me.wrong||0)+(isCorrect?0:1)};Object.assign(me,academic);if(!await syncPlayerUpdate(me.uid,academic)){activeQuiz=null;return;}}
 
             if(activeQuiz.actionType==='cook'){const q=activeQuiz;activeQuiz=null;if(!isCorrect)return showToast('Jawaban salah; ikan tetap utuh','error');const idx=(me.cargo||[]).findIndex(i=>i.id===q.targetUid&&!i.processed&&!i.special);if(idx<0||me.coins<q.cook.cost)return showToast('Ikan atau koin tidak tersedia','warning');const cargo=[...me.cargo];cargo[idx]={...cargo[idx],processed:true,name:cargo[idx].name+' Fillet',price:Math.round(cargo[idx].price*q.cook.mult)};await syncPlayerUpdate(me.uid,{cargo,coins:me.coins-q.cook.cost+15,cooked:(me.cooked||0)+1});return showToast('🍳 Ikan berhasil diolah! Bonus +15 koin','success');}
 if(['hijack','steal','sabotage'].includes(activeQuiz.actionType)){const target=roomPlayers[activeQuiz.targetUid];if(target&&target.boatLevel>=3&&target.guardUntil>Date.now()){activeQuiz=null;return showToast('Serangan diblokir guard!','warning');}}
