@@ -1,0 +1,49 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isTeacher() {
+      return request.auth != null && request.auth.uid == '9CZ61qC0pJezJ947ovycKqehFz23';
+    }
+    function isStudent() {
+      return request.auth != null && request.auth.token.firebase.sign_in_provider == 'anonymous';
+    }
+    match /artifacts/english-fisher-quest/public/data/{room}/{playerId} {
+      allow read: if isTeacher() || (isStudent() && room.matches('room_.*'));
+      allow create, update: if isTeacher() || (isStudent() && room.matches('room_.*') && request.auth.uid == playerId);
+      allow delete: if isTeacher();
+    }
+    match /rooms/{roomId} {
+      allow read: if isTeacher() || isStudent();
+      allow write: if isTeacher();
+    }
+    // Students may request a challenge, but never directly edit another player's ship.
+    match /pvpRooms/{room}/requests/{requestId} {
+      allow read: if isTeacher() || isStudent();
+      allow create: if isStudent()
+        && request.resource.data.keys().hasOnly(['id','kind','sender','target','at'])
+        && request.resource.data.keys().hasAll(['id','kind','sender','target','at'])
+        && request.resource.data.id == requestId
+        && request.resource.data.sender == request.auth.uid
+        && request.resource.data.target is string
+        && request.resource.data.target != request.auth.uid
+        && request.resource.data.kind in ['hijack','steal','sabotage']
+        && request.resource.data.at is int;
+      allow update: if false;
+      allow delete: if isTeacher();
+    }
+    // Only the targeted, authenticated student can acknowledge and apply the attack.
+    match /pvpRooms/{room}/responses/{requestId} {
+      allow read: if isTeacher() || isStudent();
+      allow create: if isStudent()
+        && exists(/databases/$(database)/documents/pvpRooms/$(room)/requests/$(requestId))
+        && get(/databases/$(database)/documents/pvpRooms/$(room)/requests/$(requestId)).data.target == request.auth.uid
+        && request.resource.data.id == requestId
+        && request.resource.data.target == request.auth.uid
+        && request.resource.data.sender == get(/databases/$(database)/documents/pvpRooms/$(room)/requests/$(requestId)).data.sender
+        && request.resource.data.kind == get(/databases/$(database)/documents/pvpRooms/$(room)/requests/$(requestId)).data.kind
+        && request.resource.data.ok is bool;
+      allow update: if false;
+      allow delete: if isTeacher();
+    }
+  }
+}
