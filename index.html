@@ -1440,7 +1440,7 @@ if (activeQuiz.actionType === 'fishing') {
                 if (tier === 'large' && availSlots < 3) tier = availSlots === 2 ? 'medium' : 'small';
                 if (tier === 'medium' && availSlots < 2) tier = 'small';
 
-                const extra={trash:[{name:'Rusty Tin Can',icon:'🥫',image:'assets/fish/trash.png',basePrice:2,slots:1,sizeLabel:'Sampah',funFact:'Metal waste can harm marine animals.'},{name:'Plastic Bottle',icon:'🧴',image:'assets/fish/trash.png',basePrice:2,slots:1,sizeLabel:'Sampah',funFact:'Plastic can break down into microplastics.'}],treasure:[{name:'Sunken Treasure',icon:'💰',image:'assets/fish/treasure.png',basePrice:120,slots:1,sizeLabel:'Harta',funFact:'Shipwrecks reveal clues about maritime history.'}]};const pool=extra[tier]||FISH_CATALOG[tier];
+                const extra={trash:[{name:'Rusty Tin Can',icon:'🥫',image:'assets/fish/trash.svg',basePrice:2,slots:1,sizeLabel:'Sampah',funFact:'Metal waste can harm marine animals.'},{name:'Plastic Bottle',icon:'🧴',image:'assets/fish/trash.svg',basePrice:2,slots:1,sizeLabel:'Sampah',funFact:'Plastic can break down into microplastics.'}],treasure:[{name:'Sunken Treasure',icon:'💰',image:'assets/fish/treasure.svg',basePrice:120,slots:1,sizeLabel:'Harta',funFact:'Shipwrecks reveal clues about maritime history.'}]};const pool=extra[tier]||FISH_CATALOG[tier];
                 const template = pool[Math.floor(Math.random() * pool.length)];
                 const finalPrice = Math.round(template.basePrice * getRodMultiplier(me.rodLevel));
 
