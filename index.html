@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EngReview Tropical Edition — Draft</title>
+    <title>Tropical English Quest — Grade XI</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -1326,6 +1326,8 @@ async function receivePvpRequest(room,uid,request){
    if(!victimSnap.exists()||!attackerSnap.exists())throw Error('Player unavailable');
    if(classBlocked())throw Error('Classroom paused or ended');
    const victim=victimSnap.data(),attacker=attackerSnap.data(),now=Date.now();
+   const receipts={...(victim.pvpReceipts||{})};
+   if(receipts[request.id]){payload=receipts[request.id];return;}
    if((victim.guardUntil||0)>now)throw Error('Ship protected by guard');
    let patch={},result={};
    if(request.kind==='steal'){
@@ -1342,8 +1344,10 @@ async function receivePvpRequest(room,uid,request){
    const verbs={hijack:' membajak kapal ',steal:' mencuri ikan dari kapal ',sabotage:' menyabotase kapal '};
    const icons={hijack:'⚔️ ',steal:'🏴‍☠️ ',sabotage:'💣 '};
    victimLog=icons[request.kind]+(attacker.name||'Captain')+verbs[request.kind]+(victim.name||'Captain');
-   tx.update(victimRef,{...patch,updatedAt:now,lastEvent:victimLog,pvpBy:request.sender,pvpAt:now,pvpKind:request.kind});
    payload=result;
+   receipts[request.id]=result;
+   const keys=Object.keys(receipts);if(keys.length>35)delete receipts[keys[0]];
+   tx.update(victimRef,{...patch,pvpReceipts:receipts,updatedAt:now,lastEvent:victimLog,pvpBy:request.sender,pvpAt:now,pvpKind:request.kind});
   });
  }catch(e){error=e.message||e.code||'PvP rejected'}
  try{
