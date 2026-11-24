@@ -3,7 +3,8 @@ import {initializeApp} from 'https://www.gstatic.com/firebasejs/11.6.1/firebase-
 import {getAuth,signInWithEmailAndPassword,onAuthStateChanged,signOut} from 'https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js';
 import * as rt from 'https://www.gstatic.com/firebasejs/11.6.1/firebase-database.js';
 const getFirestore=a=>rt.getDatabase(a,'https://summer-english-default-rtdb.asia-southeast1.firebasedatabase.app');
-const doc=collection=(d,...p)=>rt.ref(d,(p[0]==='artifacts'?['tropicalXI','players',...p.slice(4)]:['tropicalXI',...p]).join('/'));
+const doc=(d,...p)=>rt.ref(d,(p[0]==='artifacts'?['tropicalXI','players',...p.slice(4)]:['tropicalXI',...p]).join('/'));
+const collection=doc;
 const wrap=x=>{let docs=[];x.forEach(c=>{docs.push({ref:c.ref,data:()=>c.val()});return false});return {data:()=>x.val(),docs}};
 const onSnapshot=(r,f,e)=>rt.onValue(r,x=>f(wrap(x)),e);
 const setDoc=(r,v,o)=>o?.merge?rt.update(r,v):rt.set(r,v);
