@@ -523,7 +523,20 @@ body{background:radial-gradient(ellipse at 85% 4%,#ffda66 0 5%,transparent 5.2%)
             try {
                 ({initializeApp}=await import('https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js'));
                 ({getAuth,signInAnonymously,signInWithCustomToken}=await import('https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js'));
-                ({getFirestore,doc,setDoc,onSnapshot,collection,getDoc,runTransaction,query,where}=await import('https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js'));
+                const rt=await import('https://www.gstatic.com/firebasejs/11.6.1/firebase-database.js');
+firebaseConfig.databaseURL='https://summer-english-default-rtdb.asia-southeast1.firebasedatabase.app';
+getFirestore=rt.getDatabase;
+const pathOf=p=>p[0]==='artifacts'?['tropicalXI','players',...p.slice(4)].join('/'):['tropicalXI',...p].join('/');
+doc=collection=(d,...p)=>rt.ref(d,pathOf(p));
+const norm=v=>v?.uid?{...v,cargo:v.cargo||[],academicTopics:v.academicTopics||{},pvpClaims:v.pvpClaims||[]}:v;
+const wrap=x=>({id:x.key,exists:()=>x.exists(),data:()=>norm(x.val()),forEach:f=>x.forEach(c=>{f(wrap(c));return false}),docChanges:()=>{let a=[];x.forEach(c=>{a.push({type:'added',doc:wrap(c)});return false});return a}});
+getDoc=async r=>wrap(await rt.get(r));
+setDoc=(r,v,o)=>o?.merge?rt.update(r,v):rt.set(r,v);
+where=(k,op,v)=>[rt.orderByChild(k),rt.equalTo(v)];
+query=(r,w)=>rt.query(r,...w);
+onSnapshot=(r,f,e)=>rt.onValue(r,x=>f(wrap(x)),e);
+runTransaction=async(d,fn)=>{let writes=[];await fn({get:getDoc,update:(r,v)=>writes.push([r,v])});for(const [r,v] of writes)await rt.update(r,v)};
+
                 app = initializeApp(firebaseConfig);
                 auth = getAuth(app);
                 db = getFirestore(app);
@@ -840,7 +853,7 @@ window.joinMultiplayerRoom = async function() {
             }
 
             myUid = currentUser ? currentUser.uid : 'tab-' + (globalThis.crypto?.randomUUID?.() || Math.random().toString(36).slice(2)).slice(0,8);
-            currentRoomCode = roomInput;
+            if(!/^[A-Z0-9_-]{1,32}$/.test(roomInput))return showToast('Invalid room code','error'); const control=await getDoc(doc(db,'rooms',roomInput));classSession=control.data()||{};if(classSession.status!=='LIVE'||classBlocked())return showToast('Classroom not active','error');currentRoomCode = roomInput;
 
             const newPlayerState = {
                 uid: myUid,
